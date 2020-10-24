@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Test</title>
+        <script src="bus_arrival.js"></script>
+        <script src="traffic_incidents.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+        <script>
+            $(document).ready(function(){
+                $(".submit").click(function(){
+                    var bs_code = $(this).attr('bs_code');
+                    $.ajax({
+                        type:"POST",
+                        url:'busArrivalAP.php',
+                        data:"bs_code=" + bs_code,
+                        success: "success"
+                    })
+                })
+            })
+        </script> -->
+    </head>
+    <body>
+        <button type="button" onclick="getTrafficIncidents()">Get Traffic Incidents</button><br>
+        
+        <!-- <form action="busArrivalAPI.php" method="post"> -->
+        <form id="ba_form">
+
+            <label for="bs_code">Bus Stop Code:</label> 
+            <input type="number" id="bs_code" name="bs_code"/>
+            
+            <button type="button" onclick="sendFormData()">Submit</button>
+            
+        </form> 
+<!-- 
+        <button type="button" onclick="getBusArrival()">Get Bus Arrival Information</button><br> -->
+        
+    </body>
+</html>
