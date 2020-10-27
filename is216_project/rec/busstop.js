@@ -1,4 +1,4 @@
-
+busstopcodes = [];
 
 function getBusStop() {
     url ="busStopAPI.php";
@@ -13,9 +13,11 @@ function getBusStop() {
             var records = json_obj.value;
 
             // E.g extracting the bus service no. from the json obj. 
-            console.log(records[0].BusStopCode);
-            console.log(records[0].Description);
-            
+            // console.log(records[0].BusStopCode);
+            for (var rec of records) {
+                // console.log(rec.BusStopCode);
+                busstopcodes.push(rec.BusStopCode);
+            }
         }
     }
     request.open("GET", url, true);
