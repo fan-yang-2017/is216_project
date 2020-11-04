@@ -19,7 +19,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 $response = curl_exec($ch); //get the initial array named response
 
 //second and third 500
-for ($skip_num = 500; $skip_num <=1000; $skip_num += 500){
+for ($skip_num = 500; $skip_num <=5000; $skip_num += 500){
     $fields = array('$skip' => $skip_num);
 
     // HTTP GET

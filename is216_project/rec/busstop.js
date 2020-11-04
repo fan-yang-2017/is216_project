@@ -1,7 +1,7 @@
 busstopcodes = [];
 
 function getBusStop() {
-    url ="busstopAPI.php";
+    url ="../rec/busstopAPI.php";
 
     var request = new XMLHttpRequest();
     request.onreadystatechange = function() {
@@ -19,7 +19,7 @@ function getBusStop() {
                 // console.log(rec.BusStopCode);
                 busstopcodes.push(rec.BusStopCode);
             }
-            // console.log(busstopcodes);
+            console.log(busstopcodes);
         }
     }
     request.open("GET", url, true);
