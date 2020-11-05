@@ -133,4 +133,4 @@ function autocomplete(inp, arr) {
     });
   }
 
-autocomplete(document.getElementById("busstop"), busstopcodes);
+autocomplete(document.getElementById("bs_code"), busstopcodes);

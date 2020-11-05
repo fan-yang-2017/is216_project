@@ -78,13 +78,29 @@
             <h2>Bus Info
 
             </h2>
-           
+
+            <!-- <div class="input-group mb-3">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Button</button>
+              </div>
+              <input type="text" class="form-control">
+            </div> -->
+            
             <form>
               <div class="form-group">
-                <div class="form-group">
-                  <label for="busstop">Plese enter bus stop code</label>
-                  <input type="email" class="form-control" id="busstop" placeholder="eg.83189">
+                <div class="form-inline">
+                  <div class="form-group">
+                    
+
+                    <label for="busstop">Plese enter bus stop code:</label> 
+                    <input type="email" class="form-control" id="bs_code" placeholder="eg.83189">
+                  </div>
+
+                  <div class="form-group">
+                    <button class="btn btn-primary" type="submit" onclick="sendFormData()">Submit</button>
+                  </div>
                 </div>
+                  
                 <br>
                 <label for="sel2">Select Bus number</label>
                 <select multiple class="form-control" id="sel2">
@@ -95,6 +111,31 @@
                 </select>
               </div>
             </form>
+
+
+
+
+            <!-- <form>
+              <div class="form-group">
+                <div class="form-group">
+                  <label for="busstop">Plese enter bus stop code:</label> 
+
+                  <input type="email" class="form-control" id="bs_code" placeholder="eg.83189">
+                  &nbsp
+                  <button class="btn btn-primary" type="submit" onclick="sendFormData()">Submit</button>
+                </div>
+                <br>
+                <label for="sel2">Select Bus number</label>
+                <select multiple class="form-control" id="sel2">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  
+                </select>
+              </div>
+            </form> -->
+
+
        
             <table class="table">
                 <thead>
@@ -132,5 +173,6 @@
             <div class="container"><div class="small text-center text-muted">Time Traveller</div></div>
         </footer>
         <script type="text/javascript" src="../rec/busstop.js"></script>
+        <script type="text/javascript" src="../rec/bus_arrival.js"></script>
     </body>
 </html>
