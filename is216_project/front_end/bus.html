@@ -96,14 +96,15 @@
                 </div>
                   
                 <br>
-                <label for="sel2">Select Bus number</label>
-                <!-- <select multiple class="form-control" id="sel2">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  
-                </select> -->
-              <!-- </div> -->
+                <div id="div2" class="d-none">
+                  <label for="sel2">Select Bus number</label>
+                  <select multiple class="form-control" id="bus_display" onchange="getBusArrival(this)">
+                    <!-- <option>1</option>
+                    <option>2</option>
+                    <option>3</option> -->
+                    
+                  </select>
+                </div>
             </form>
 
 
@@ -140,8 +141,8 @@
                     
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
+                <tbody id="arrival_time">
+                  <!-- <tr>
                     <th scope="row">1</th>
                     <td>name1</td>
                     <td>12:00pm</td>
@@ -158,7 +159,7 @@
                     <td>name3</td>
                     <td>12:00pm</td>
                     
-                  </tr>
+                  </tr> -->
                 </tbody>
               </table>
             </div>
