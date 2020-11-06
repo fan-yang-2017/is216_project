@@ -10,155 +10,148 @@
         <title>Time Traveller</title>
 
         <style>
-        .card{
-          height:380px;
-        }
-        .card img{
+          .card{
+            height:380px;
+          }
+          .card img{
+            
+            height:200px;
+            
+          }
+          html, body {
+              height: 100%;
+              margin: 0;
+              padding: 0;
+              background-color:floralwhite;
+          }
           
-          height:200px;
-           
-        }
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            background-color:floralwhite;
-        }
-        
-        #main{
-            position: relative;
-            height:60%;
-            background-image: url("img/Screenshot\ 2020-10-24\ at\ 2.09.02\ PM\ 2.png");
-            padding:150px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: scroll;
-            background-size: cover;
-        }   
-        footer{
-            margin-top: 10px;
-        }
-                * {
-        box-sizing: border-box;
-        }
+          #main{
+              position: relative;
+              height:60%;
+              background-image: url("img/Screenshot\ 2020-10-24\ at\ 2.09.02\ PM\ 2.png");
+              padding:150px;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-attachment: scroll;
+              background-size: cover;
+          }   
+          footer{
+              margin-top: 10px;
+          }
+                  * {
+          box-sizing: border-box;
+          }
 
-        /* Create two unequal columns that floats next to each other */
-        .column {
-        float: left;
-        padding: 10px;
-        
-        }
+          /* Create two unequal columns that floats next to each other */
+          .column {
+          float: left;
+          padding: 10px;
+          
+          }
 
-        .left {
-        width: 40%;
-        
-        }
+          .left {
+          width: 40%;
+          
+          }
 
-        .right {
-        width: 55%;
-        
-        }   
+          .right {
+          width: 55%;
+          
+          }   
 
-        /* Clear floats after the columns */
-        .row:after {
-        content: "";
-        display: table;
-        clear: both;
-        }
-       
-        .search-container{
-            margin:30px;
-            padding:10px;
-            border:solid 0.5px;
-            border-radius: 15%;;
-        }
-        .search-container button {
-            
-            border: none;
-            cursor: pointer;
-        }
-        .radio{
-            padding-left: 50px;
-            padding-bottom:20px;
-            padding-top: 20px;
-        }
-        h3{
-            margin-left:50px;
-        }
-        h2{
-            text-align: center;
-            
-            font-family:monospace;
-        }
-        table{
-            margin-top: 50px;
-            
-        }
-        #map {
-        width: 90%;
-        height: 65%;
-        margin-left:80px;
-        justify-content: center;
-      }
+          /* Clear floats after the columns */
+          .row:after {
+          content: "";
+          display: table;
+          clear: both;
+          }
         
-        </style>
+          .search-container{
+              margin:30px;
+              padding:10px;
+              border:solid 0.5px;
+              border-radius: 15%;;
+          }
+          .search-container button {
+              
+              border: none;
+              cursor: pointer;
+          }
+          .radio{
+              padding-left: 50px;
+              padding-bottom:20px;
+              padding-top: 20px;
+          }
+          h3{
+              margin-left:50px;
+          }
+          h2{
+              text-align: center;
+              
+              font-family:monospace;
+          }
+          table{
+              margin-top: 50px;
+              
+          }
+          #map {
+          width: 90%;
+          height: 65%;
+          margin-left:80px;
+          justify-content: center;
+        } 
+      </style>
+
     </head>
+
     <body >
         <!-- Navigation-->
         <header>
-          <div>
             <nav class="navbar navbar-expand-md">
                 <a class="navbar-brand" href="Home.html">
                     <img src="img/download.jpeg" width="30" height="30" alt="logo">
                     Time Traveller
-            </a> 
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="Home.html">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="bus.html">Bus</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="mrt.html">MRT</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="incident.html">Traffic Incident</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="roadwork.html">Roadwork</a>
-                  </li>
-                </ul>
-                <nav class="form-inline mt-2 mt-md-0">
-                    <a class="navbar-brand" href="one.html">
-                        <img src="img/account.jpg" width="30" height="30" alt="logo">
                 </a> 
-                </nav>
-              </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="bus.html">Bus</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="mrt.html">MRT</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="incident.html">Traffic Incident</a>
+                    </li>
+                  </ul>
+                  <nav class="form-inline mt-2 mt-md-0">
+                      <a class="navbar-brand" href="one.html">
+                          <img src="img/account.jpg" width="30" height="30" alt="logo">
+                      </a> 
+                  </nav>
+                </div>
             </nav>
           </header>
 
-          <div class="container-fluid" id="main">
-               
-                    <div class="row  align-items-center justify-content-center text-center">
-                        <div class="col-lg-10 align-self-end">
-                            <h1 class="text-uppercase text-white font-weight-bold">Save your time</h1>
-                            <hr class="divider my-4" />
-                        </div>
-                        <div class="col-lg-8 align-self-baseline">
-                            <p class="font-weight-light text-white mb-5">Know the current traffic situation</p>
-                            <a class="btn btn-primary btn-xl js-scroll-trigger" href="signup.html">Sign Up </a>  
-                            <a class="btn btn-primary btn-xl js-scroll-trigger" href="login.html">Log in </a>
-                        </div>
-             
-          
-          </div>
-          
-        </div>
+            <div class="container-fluid" id="main">
+                
+                      <div class="row  align-items-center justify-content-center text-center">
+                          <div class="col-lg-10 align-self-end">
+                              <h1 class="text-uppercase text-white font-weight-bold">Save your time</h1>
+                              <hr class="divider my-4" />
+                          </div>
+                          <div class="col-lg-8 align-self-baseline">
+                              <p class="font-weight-light text-white mb-5">Know the current traffic situation</p>
+                                <!-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="signup.html">Sign Up </a>  
+                                <a class="btn btn-primary btn-xl js-scroll-trigger" href="login.html">Log in </a> --> 
+
+                                <!-- removed sign up and log in button-->
+                          </div>
+                      </div>
+            </div>
        
         <div class="container marketing text-center" id="select">
 
@@ -180,7 +173,7 @@
                   <img class="card-img-top" src="img/mrtphoto.jpg" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">MRT</h5>
-                    <p class="card-text">Know latest mrt breakdown info.</p>
+                    <p class="card-text">Get latest MRT Breakdown Info.</p>
                     <a class="btn  btn-outline-info" href="mrt.html" role="button">Find Out  &raquo;</a>
                   </div>
                 </div>
@@ -191,9 +184,8 @@
                   <img class="card-img-top" src="img/express.jpg" alt="Card image cap" >
                   <div class="card-body">
                     <h5 class="card-title">Drive</h5>
-                    <p class="card-text">Know latest Traffic info</p>
-                    <a class="btn  btn-outline-info" href="roadwork.html" role="button">Road Work &raquo;</a>
-                    <a class="btn  btn-outline-info" href="incident.html" role="button">Traffic Incident&raquo;</a>
+                    <p class="card-text">Get latest Traffic Info</p>
+                    <a class="btn  btn-outline-info" href="incident.html" role="button">Find Out&raquo;</a>
                   </div>
               </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
