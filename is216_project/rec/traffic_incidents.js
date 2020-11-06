@@ -1,6 +1,6 @@
 //Populate the webpage when the user is directed to incident.html
 function getTrafficIncidents() {
-
+ 
     var url ="../rec/traffic_incidentsAPI.php";
 
     var request = new XMLHttpRequest();

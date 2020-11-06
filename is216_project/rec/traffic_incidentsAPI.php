@@ -17,7 +17,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 ));
 $response = curl_exec($ch);    
 
-
+ 
 // close handle to release resources
 curl_close($ch);
 
