@@ -3,13 +3,13 @@ function sendFormData(){
     var formData = new FormData();
     // console.log(formData);
     var bs_code = document.getElementById("bs_code").value;
-    console.log(bs_code);
+    console.log(typeof(bs_code));
     formData.append("bs_code",bs_code); 
     // for(var pair of formData.entries()) {
     //     console.log(pair[0]+', '+pair[1]);
     //   }
 
-    var url = "busArrivalAPI.php";
+    var url = "../rec/busArrivalAPI.php";
     var request = new XMLHttpRequest();
 
     request.onload = function(){
