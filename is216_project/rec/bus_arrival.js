@@ -9,7 +9,7 @@ function sendFormData(){
     //     console.log(pair[0]+', '+pair[1]);
     //   }
 
-    var url = "busArrivalAPI.php";
+    var url = "../rec/busArrivalAPI.php";
     var request = new XMLHttpRequest();
 
     request.onload = function(){
