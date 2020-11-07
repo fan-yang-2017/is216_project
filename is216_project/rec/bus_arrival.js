@@ -87,23 +87,36 @@ function getBusArrival(busNo){
 
                 // covert from seconds to minutes
                 var nextBusTime = Math.floor(((nextbus.getTime() - d.getTime())/1000)/60);
-                var nextBus2Time = Math.floor(((nextbus2.getTime() - d.getTime())/1000)/60)
+                var nextBus2Time = Math.floor(((nextbus2.getTime() - d.getTime())/1000)/60);
 
                 output += "<tr>";
                 output += "<td>" + i.ServiceNo + "</td>";
 
-                if (nextBusTime <= 0) {
-                    output += "<td>Arriving</td>";
+                // fix bug if no more bus services
+                if (isNaN(typeof(nextBusTime))) {
+                    if (nextBusTime <= 0) {
+                        output += "<td>Arriving</td>";
+                    }
+                    else {
+                        output += "<td>" + nextBusTime + " mins</td>";
+                    }
                 }
                 else {
-                    output += "<td>" + nextBusTime + " mins</td>";
+                    output += "<td>-</td>";
                 }
-                if (nextBus2Time <= 0) {
-                    output += "<td>Arriving</td>";
+
+                if (isNaN(typeof(nextBus2Time))) {
+                    if (nextBus2Time <= 0) {
+                        output += "<td>Arriving</td>";
+                    } 
+                    else {
+                        output += "<td>" + nextBus2Time + " mins</td>";
+                    }
                 } 
                 else {
-                    output += "<td>" + nextBus2Time + " mins</td>";
+                    output += "<td>-</td>";
                 }
+                    
                 output += "</tr>"
 
                 document.getElementById("arrival_time").innerHTML = output;
