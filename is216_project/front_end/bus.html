@@ -107,62 +107,20 @@
                 </div>
             </form>
 
-
-
-
-            <!-- <form>
-              <div class="form-group">
-                <div class="form-group">
-                  <label for="busstop">Plese enter bus stop code:</label> 
-
-                  <input type="email" class="form-control" id="bs_code" placeholder="eg.83189">
-                  &nbsp
-                  <button class="btn btn-primary" type="submit" onclick="sendFormData()">Submit</button>
-                </div>
-                <br>
-                <label for="sel2">Select Bus number</label>
-                <select multiple class="form-control" id="sel2">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  
-                </select>
-              </div>
-            </form> -->
-
-
-       
-            <table class="table">
+            <table class="d-none table table-dark" id="arrival_table" style="margin-top: 20px;">
                 <thead>
                   <tr>
                     <th scope="col">Bus Number</th>
-                    <th scope="col">Next Arrival Time</th>
-                    <th scope="col">Next 2 Arrival Time</th>
+                    <th scope="col">Bus Arrival Time</th>
+                    <th scope="col">Next Bus Arrival Time</th>
                     
                   </tr>
                 </thead>
                 <tbody id="arrival_time">
-                  <!-- <tr>
-                    <th scope="row">1</th>
-                    <td>name1</td>
-                    <td>12:00pm</td>
-                    
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>name2</td>
-                    <td>12:00pm</td>
-                    
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>name3</td>
-                    <td>12:00pm</td>
-                    
-                  </tr> -->
+
                 </tbody>
               </table>
-            </div>
+          </div>
         <!-- Footer-->
         <footer class="bg-light">
             <div class="container"><div class="small text-center text-muted">Time Traveller</div></div>

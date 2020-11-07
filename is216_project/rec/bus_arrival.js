@@ -51,7 +51,7 @@ function sendFormData(){
 
 function getBusArrival(busNo){
     var bus = busNo.options[busNo.selectedIndex].text;
-    console.log(bus);
+    // console.log(bus);
     
     //sending data to php file
     var formData = new FormData();
@@ -68,23 +68,42 @@ function getBusArrival(busNo){
     var request = new XMLHttpRequest();
 
     request.onload = function(){
-        // console.log(JSON.parse(this.responseText));
         var data = JSON.parse(this.responseText).Services;
-        console.log(data);
-        var d = new Date();
-        var n = d.getMinutes();
 
-        // var arrival_time = document.getElementById("bus_arrival");
+        if (bus !== null ) {
+            arrival_table.classList.remove("d-none");
+        }
+
+        // current time
+        var d = new Date();
+
         var output = "";
 
         for (i of data) {
             if (i.ServiceNo == bus) {
-                var nextbus = i.NextBus.EstimatedArrival.getMinutes() - n;
-                var nextbus2 = i.NextBus2.EstimatedArrival.getMinutes() - n;
+                // set retrieved time into javascript date format
+                var nextbus = new Date(i.NextBus.EstimatedArrival);
+                var nextbus2 = new Date(i.NextBus2.EstimatedArrival);
+
+                // covert from seconds to minutes
+                var nextBusTime = Math.floor(((nextbus.getTime() - d.getTime())/1000)/60);
+                var nextBus2Time = Math.floor(((nextbus2.getTime() - d.getTime())/1000)/60)
+
                 output += "<tr>";
                 output += "<td>" + i.ServiceNo + "</td>";
-                output += "<td>" + nextbus + "</td>";
-                output += "<td>" + nextbus2 + "</td>";
+
+                if (nextBusTime <= 0) {
+                    output += "<td>Arriving</td>";
+                }
+                else {
+                    output += "<td>" + nextBusTime + " mins</td>";
+                }
+                if (nextBus2Time <= 0) {
+                    output += "<td>Arriving</td>";
+                } 
+                else {
+                    output += "<td>" + nextBus2Time + " mins</td>";
+                }
                 output += "</tr>"
 
                 document.getElementById("arrival_time").innerHTML = output;
