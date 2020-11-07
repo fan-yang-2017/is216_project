@@ -130,17 +130,3 @@ function getBusArrival(busNo){
 }
 
 
-// function getBusArrival(){
-//     //receiving data 
-//     var url = "busArrivalAPI.php";
-//     var return_rqt = new XMLHttpRequest();
-//     return_rqt.onreadystatechange = function() {
-//         if (this.readyState == 4 && this.status == 200) {
-//             var data = JSON.parse(this.responseText);
-//             // document.write(this.responseText);
-//             console.log(data);
-//         }
-//     }
-//     return_rqt.open("GET", url, true);
-//     return_rqt.send();
-// }

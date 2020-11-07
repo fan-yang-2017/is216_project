@@ -6,26 +6,11 @@
         <title>Test</title>
         <script src="bus_arrival.js"></script>
         <script src="traffic_incidents.js"></script>
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-        <script>
-            $(document).ready(function(){
-                $(".submit").click(function(){
-                    var bs_code = $(this).attr('bs_code');
-                    $.ajax({
-                        type:"POST",
-                        url:'busArrivalAP.php',
-                        data:"bs_code=" + bs_code,
-                        success: "success"
-                    })
-                })
-            })
-        </script> -->
+
     </head>
     <body>
         <button type="button" onclick="getTrafficIncidents()">Get Traffic Incidents</button><br>
-        
-        <!-- <form action="busArrivalAPI.php" method="post"> -->
+
         <form id="ba_form">
 
             <label for="bs_code">Bus Stop Code:</label> 
@@ -34,8 +19,7 @@
             <button type="button" onclick="sendFormData()">Submit</button>
             
         </form> 
-<!-- 
-        <button type="button" onclick="getBusArrival()">Get Bus Arrival Information</button><br> -->
+
         
     </body>
 </html>
