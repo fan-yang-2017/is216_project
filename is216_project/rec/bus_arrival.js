@@ -45,8 +45,6 @@ function sendFormData(){
     
     request.open("POST", url, true);
     request.send(formData);
-
-    // getBusArrival();
 }
 
 function getBusArrival(busNo){
