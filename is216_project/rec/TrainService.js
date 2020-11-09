@@ -10,18 +10,17 @@ function getParticularTrainService() {
       // choice = radios[i].value;
       checkbox_list.push(radios[i].value);
     }
-    else if(radios.lastChild !== null){
-      radios.lastChild.remove()
+    else{
+      
     }
-    
-    }
+  }
   
   var start = ``;
   var table_row = `` ;
   var end = ``;
   var first_load = false;
   console.log(checkbox_list);
-  $.getJSON("http://localhost/is216/project/TrainServiceAlerts/TrainServiceAlerts.json", function (json_obj) {
+  $.getJSON("../rec/TrainServiceAlerts.json", function (json_obj) {
   var  has_record = false;
     for (var j = 0; j < json_obj.value.AffectedSegments.length; j++) {
       for(var k = 0; k<checkbox_list.length; k++){
@@ -137,7 +136,7 @@ function getTrainService() {
     //document.getElementById("display").innerHTML = "There is no disruption to MRT services currently.";
 
   }
-  request.open("GET", "http://localhost/is216/project/TrainService/Train.php", true);
+  request.open("GET", "../rec/Train.php", true);
   request.send();
 
 }
@@ -145,49 +144,7 @@ function getTrainService() {
 
 
 
-function getTrainServiceDemo() {
-  $.getJSON("http://localhost/is216/project/TrainServiceAlerts/TrainServiceAlerts.json", function (json_obj) {
-    // console.log(json_obj); 
-    // console.log() 
-    //console.log(json_obj.value.AffectedSegments[0]["Direction"]); 
 
-    //var html_str =`${json_obj.value.AffectedSegments[0]["Direction"]}`;
-
-    var html_str = `                
-            <table class="table" style="margin-left: 30px">
-            <thead>
-                <tr>
-                    <th scope="col">Line</th>
-                    <th scope="col">Direction</th>
-                    <th scope="col">Satations</th>
-                    <th scope="col">Free Public Bus</th>
-                    <th scope="col">Free MRT Shuttle</th>
-                    <th scope="col">Description</th>
-                  </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">${json_obj.value.AffectedSegments[0]["Line"]}</th>
-                <td>${json_obj.value.AffectedSegments[0]["Direction"]}</td>
-                <td>${json_obj.value.AffectedSegments[0]["Stations"]}</td>
-                <td>${json_obj.value.AffectedSegments[0]["FreePublicBus"]}</td>
-                <td>${json_obj.value.AffectedSegments[0]["FreeMRTShuttle"]}</td>
-                <td style="font-size: 0.875em">${json_obj.value.Message[0]["Content"]}</td>
-              </tr>
-              <tr>
-              <th scope="row">${json_obj.value.AffectedSegments[1]["Line"]}</th>
-              <td>${json_obj.value.AffectedSegments[1]["Direction"]}</td>
-              <td>${json_obj.value.AffectedSegments[1]["Stations"]}</td>
-              <td>${json_obj.value.AffectedSegments[1]["FreePublicBus"]}</td>
-              <td>${json_obj.value.AffectedSegments[1]["FreeMRTShuttle"]}</td>
-              <td style="font-size: 0.875em">${json_obj.value.Message[1]["Content"]}</td>
-              </tr>
-            </tbody>
-          </table> `;
-    document.getElementById("display").innerHTML = html_str;
-  });
-
-}
 
 
 

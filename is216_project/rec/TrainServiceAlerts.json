@@ -1,0 +1,49 @@
+{
+    "odata.metadata": "http://datamall2.mytransport.sg/ltaodataservice/$metadata#TrainServicesAlerts",
+    "value": {
+        "Status": 2,
+        "AffectedSegments": [
+            {
+                "Line": "NEL",
+                "Direction": "HarbourFront",
+                "Stations": "NE9,NE8,NE7,NE6",
+                "FreePublicBus": "NE9,NE8,NE7,NE6",
+                "FreeMRTShuttle": "NE9,NE8,NE7,NE6",
+                "MRTShuttleDirection": "HarbourFront"
+            },
+            {
+                "Line": "NSL",
+                "Direction": "Marina South Pier",
+                "Stations": "NS21,NS22,NS23",
+                "FreePublicBus": "NS21,NS22,NS23",
+                "FreeMRTShuttle": "NS21,NS22,NS23",
+                "MRTShuttleDirection": "Marina South Pier"
+            },
+            {
+                "Line": "EWL",
+                "Direction": "Tuas Link",
+                "Stations": "E14,E15,E16",
+                "FreePublicBus": "E14,E15,E16",
+                "FreeMRTShuttle": "E14,E15,E16",
+                "MRTShuttleDirection": "Tuas Link"
+            }
+
+            
+        ],
+        "Message": [
+            {
+                "Content": "0901hrs : NEL - Additional travelling time of 20 minutes between Boon Keng and Dhoby Ghuat stations towards HarbourFront station due to a signal fault.",
+                "CreatedDate": "2020-10-26 09:01:53"
+            }, 
+            {
+                "Content": "0901hrs : NSL - Additional travelling time of 15 minutes between Newton and Somerset stations towards Marina South Pier station due to a signal fault.",
+                "CreatedDate": "2020-10-26 09:01:53"
+            },
+            {
+                "Content": "0901hrs : EWL - Additional travelling time of 15 minutes between Raffles Place and Outram Park stations towards Tuas Link station due to a signal fault.",
+                "CreatedDate": "2020-10-26 09:01:53"
+            }
+
+        ]
+    }
+}

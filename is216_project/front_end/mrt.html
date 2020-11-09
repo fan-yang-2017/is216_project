@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
         
         <title>Time Traveller</title>
+        <script src="../rec/TrainService.js"></script>
 
         <style>
         html, body {
@@ -58,123 +59,63 @@
         margin-left:80px;
         justify-content: center;
       }
+      .msg{
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+      }
         </style>
     </head>
-    <body >
+    <body onload="getTrainService()">
         <!-- Navigation-->
         <header>
             <nav class="navbar navbar-expand-md">
-                <a class="navbar-brand" href="home.html">
+                <a class="navbar-brand" href="one.html">
                     <img src="img/download.jpeg" width="30" height="30" alt="logo">
                     Time Traveller
+            </a> 
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="Home.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="bus.html">Bus</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="mrt.html">MRT</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="incident.html">Traffic Incident</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="roadwork.html">Roadwork</a>
+                    </li>
+                  </ul>
+                <nav class="form-inline mt-2 mt-md-0">
+                    <a class="navbar-brand" href="one.html">
+                        <img src="img/account.jpg" width="30" height="30" alt="logo">
                 </a> 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                  <ul class="navbar-nav mr-auto">
-                      <li class="nav-item">
-                        <a class="nav-link" href="bus.html">Bus</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="mrt.html">MRT</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="incident.html">Traffic Incident</a>
-                      </li>
-                    </ul>
-                  <nav class="form-inline mt-2 mt-md-0">
-                      <a class="navbar-brand" href="one.html">
-                          <img src="img/account.jpg" width="30" height="30" alt="logo">
-                      </a> 
-                  </nav>
-                </div>
+                </nav>
+              </div>
             </nav>
           </header>
           <h2>MRT Breakdown Information</h2>
-         
-          <div id="map"></div>
           
+          <p align="right">
+            <a style="margin-right: 40px" class="btn  btn-outline-info" href="demoMRT.html" role="button">Demo  &raquo;</a>
+          </p>
+
+             <div id="map"></div>
           
-          <div class="row justify-content-center" > 
-             <h3>Select MRT Line</h3>
-          </div>
-            
-            
-          <div class="row" id="select"> 
-            <form>
-              <label class="radio-inline">
-                <input type="radio" name="EWL" >East-West Line <span style="color:green;font-weight: bold;">EWL</span>
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="NSL">North-South Line<span style="color:red;font-weight: bold;">NSL</span>
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="NEL" >North-East Line<span style="color:purple;font-weight: bold;">NEL</span>
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="CCL" >Circle Line<span style="color:darkorange;font-weight: bold;">CCL</span>
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="CGL" >Circle Line (for Changi Extension – Expo, Changi Airport)<span style="color:darkorange;;font-weight: bold;">CGL</span> 
-                </label>
-              <label class="radio-inline">
-                <input type="radio" name="CEL" >Circle Line (for Circle Line Extension – BayFront, Marina Bay)<span style="color:darkorange;font-weight: bold;">CEL</span>
-               </label>
-               <label class="radio-inline">
-                <input type="radio" name="DTL">Downtown Line<span style="color:blue;font-weight: bold;">DTL</span> 
-              </label>
-            </form>
-          </div>        
-                 
         
-            <div class="row" id="result">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Line</th>
-                            <th scope="col">Direction</th>
-                            <th scope="col">Satations</th>
-                            <th scope="col">Free Public Bus</th>
-                            <th scope="col">Free MRT Shuttle</th>
-                            <th scope="col">Description</th>
-                          </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">NEL</th>
-                        <td>Punggol</td>
-                        <td>NE1,NE3,NE4,NE5,NE6</td>
-                        <td>NE1,NE3,NE4,NE5,NE6</td>
-                        <td>NE1,NE3,NE4,NE5,NE6</td>
-                        <td>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">NEL</th>
-                        <td>Punggol</td>
-                        <td>NE1,NE3,NE4,NE5,NE6</td>
-                        <td>NE1,NE3,NE4,NE5,NE6</td>
-                        <td>NE1,NE3,NE4,NE5,NE6</td>
-                        <td>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">NEL</th>
-                        <td>Punggol</td>
-                        <td>NE1,NE3,NE4,NE5,NE6</td>
-                        <td>NE1,NE3,NE4,NE5,NE6</td>
-                        <td>NE1,NE3,NE4,NE5,NE6</td>
-                        <td>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                
-              </div>
-            
-            </div>
-          </div>
         
        
-        
+             <div class="msg" id="display"></div>
         <!-- Footer-->
         <footer class="bg-light">
             <div class="container"><div class="small text-center text-muted">Time Traveller</div></div>
@@ -192,5 +133,9 @@
              <script defer
              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3nD9MqQk2qELQG2RWfHixIHnX1MzQ86o&callback=initMap">
            </script>
+
+          <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+        
     </body>
 </html>
