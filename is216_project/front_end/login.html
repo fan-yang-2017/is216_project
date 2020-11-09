@@ -1,4 +1,5 @@
-<!doctype html>
+
+<!Doctype html>
 <html lang="en">
   <head>
     <head>
@@ -74,20 +75,19 @@
 
   </head>
   <body class="text-center">
-    <form class="form-signin">
-  <img class="mb-4" src="img/download.jpeg" alt="" width="72" height="72">
-  <h1 class="h3 mb-3 font-weight-normal">Please Log in</h1>
-  <label for="inputEmail" class="sr-only">Email address</label>
-  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-  <label for="inputPassword" class="sr-only">Password</label>
-  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-  <div class="checkbox mb-3">
-    <label>
-      <input type="checkbox" value="remember-me"> Remember me
-    </label>
-  </div>
-  <p><a class="btn btn-lg btn-primary btn-block" type="submit" href="Home.html" role="button">Log in</a></p>
-  <p class="mt-5 mb-3 text-muted">&copy;2020</p>
-</form>
+    <form class="form-signin" method="post" action="process_login.php">
+        <img class="mb-4" src="img/download.jpeg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Please Log in</h1>
+        <div class="form-group">
+                <input type="text" name="username" class="form-control" placeholder="Enter User Name" required autofocus>
+        </div>
+
+        <div class="form-group ">   
+            <input  type="password" name="password" class="form-control" placeholder="Enter Your Password" required>
+        </div>
+        <input class="btn btn-lg btn-primary btn-block"  type="submit" value="Login"/>
+        
+        <p class="mt-5 mb-3 text-muted">&copy;2020</p>
+    </form>
 </body>
 </html>
