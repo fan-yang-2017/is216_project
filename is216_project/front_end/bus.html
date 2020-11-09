@@ -33,6 +33,30 @@
         footer{
             margin-top: 10px;
         }
+
+        .autocomplete{
+          position: relative;
+          display: inline-block;
+        }
+
+        .autocomplete-items {
+          position: absolute;/*absolute position is needed to remove the element from the normal document flow*/
+          border: 1px solid #d4d4d4;
+          border-bottom: none;
+          border-top: none;
+          z-index: 99;
+          /*position the autocomplete items to be the same width as the container:*/
+          top: 100%;
+          left: 0;
+          right: 31%;
+        }
+
+        .autocomplete-items div {
+          padding: 10px;
+          cursor: pointer;
+          background-color: #fff; 
+          border-bottom: 1px solid #d4d4d4; 
+        }
         
         </style>
     </head>
@@ -78,21 +102,15 @@
               <input type="text" class="form-control">
             </div> -->
             
-            <form>
+            <form autocomplete="off">
               <!-- <div class="form-group"> -->
-                <div class="form-inline">
-                  <div class="form-group">
-                    
-
-                    <label for="bs_code">Plese enter bus stop code:</label> 
-                    <input type="text" class="form-control" id="bs_code" name="bs_code" placeholder="eg.83189">
-
-                    <button class="btn btn-primary" type="button" onclick="sendFormData()">Submit</button>
-                  </div>
-
-
-                    
-
+                <div class="autocomplete">                   
+                    <label for="bs_code">Plese enter bus stop code:</label>
+                    <div class="form-inline">
+                      <input type="text" class="form-control" id="bs_code" name="bs_code" placeholder="eg.83189">
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      <button class="btn btn-primary" type="button" onclick="sendFormData()">Submit</button>
+                    </div> 
                 </div>
                   
                 <br>

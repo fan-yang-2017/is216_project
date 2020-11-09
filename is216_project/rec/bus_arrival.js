@@ -45,8 +45,6 @@ function sendFormData(){
     
     request.open("POST", url, true);
     request.send(formData);
-
-    // getBusArrival();
 }
 
 function getBusArrival(busNo){
@@ -81,19 +79,29 @@ function getBusArrival(busNo){
 
         for (i of data) {
             if (i.ServiceNo == bus) {
-                // set retrieved time into javascript date format
-                var nextbus = new Date(i.NextBus.EstimatedArrival);
-                var nextbus2 = new Date(i.NextBus2.EstimatedArrival);
+                var rawNextDate = i.NextBus.EstimatedArrival;
+                var rawNext2Date = i.NextBus2.EstimatedArrival;
+                // var rawNext3Date = i.NextBus3.EstimatedArrival;
 
-                // covert from seconds to minutes
+                // set retrieved time into javascript date format
+                var nextbus = new Date(rawNextDate);
+                var nextbus2 = new Date(rawNext2Date);
+
+                // var nextbus3 = new Date(rawNext3Date);
+
+                // bus service info check
+                console.log(i);
+
+                // covert from miliseconds to seconds to minutes
                 var nextBusTime = Math.floor(((nextbus.getTime() - d.getTime())/1000)/60);
                 var nextBus2Time = Math.floor(((nextbus2.getTime() - d.getTime())/1000)/60);
+                // var nextBus3Time = Math.floor(((nextbus3.getTime() - d.getTime())/1000)/60);
 
                 output += "<tr>";
                 output += "<td>" + i.ServiceNo + "</td>";
 
                 // fix bug if no more bus services
-                if (isNaN(typeof(nextBusTime))) {
+                if (rawNextDate !== "") {
                     if (nextBusTime <= 0) {
                         output += "<td>Arriving</td>";
                     }
@@ -105,14 +113,14 @@ function getBusArrival(busNo){
                     output += "<td>-</td>";
                 }
 
-                if (isNaN(typeof(nextBus2Time))) {
+                if (rawNext2Date !== "") {
                     if (nextBus2Time <= 0) {
                         output += "<td>Arriving</td>";
                     } 
                     else {
                         output += "<td>" + nextBus2Time + " mins</td>";
                     }
-                } 
+                }
                 else {
                     output += "<td>-</td>";
                 }
