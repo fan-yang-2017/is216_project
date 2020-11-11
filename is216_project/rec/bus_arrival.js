@@ -68,7 +68,6 @@ function getBusArrival(busNo){
             opts.push(opt.value);
         }
     }
-    console.log(opts);
 
     //sending data to php file
     var formData = new FormData();
