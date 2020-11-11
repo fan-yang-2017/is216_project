@@ -59,13 +59,17 @@ function getBusArrival(busNo){
     
     for (var i=0, len=busNo.options.length; i<len; i++) {
         opt = busNo.options[i];
-        // check if selected
-        if ( opt.selected ) {
+        // check if selected and error handling for selecting all buses + other bus no
+        if (opt.selected && opt.value == "all") {
+            var opts = ["all"];
+        }
+        else if (opt.selected && !opts.includes("all")) {
             // add to array of option elements to return from this function
             opts.push(opt.value);
         }
     }
-    
+    console.log(opts);
+
     //sending data to php file
     var formData = new FormData();
     // console.log(formData);
