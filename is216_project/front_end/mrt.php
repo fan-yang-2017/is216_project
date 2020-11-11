@@ -1,3 +1,13 @@
+<?php
+    require_once 'common.php';
+
+    $username = '';
+    if (isset($_SESSION["user"])) {
+        $username = $_SESSION["user"];
+    } else {
+        header("Location: before_home.html");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -81,19 +91,20 @@
               <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="bus.html">Bus</a>
+                      <a class="nav-link" href="bus.php">Bus</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="mrt.html">MRT</a>
+                      <a class="nav-link" href="mrt.php">MRT</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="incident.html">Traffic Incident</a>
+                      <a class="nav-link" href="incident.php">Traffic Incident</a>
                     </li>
                   </ul>
                 <nav class="form-inline mt-2 mt-md-0">
-                    <a class="navbar-brand" href="one.html">
-                        <img src="img/account.jpg" width="30" height="30" alt="logo">
-                </a> 
+                    Welcome, <?= $username?>! 
+                    <a class="navbar-brand" href="logout.php">
+                        <img src="img/account.jpg" style="margin-left: 5px;" width="30" height="30" alt="logo">
+                    </a>
                 </nav>
               </div>
             </nav>

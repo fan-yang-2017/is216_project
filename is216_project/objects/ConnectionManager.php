@@ -3,7 +3,7 @@
         public function getConnection() {   
             $servername = "localhost";
             $username = "root";
-            $password = "";
+            $password = "root";
             $dbname = "users";
             $port = "3306";
             
