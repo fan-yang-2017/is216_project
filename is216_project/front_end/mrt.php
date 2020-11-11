@@ -94,7 +94,7 @@
                       <a class="nav-link" href="bus.php">Bus</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="mrt.php">MRT</a>
+                      <a class="nav-link" style="color: blue;" href="mrt.php">MRT</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="incident.php">Traffic Incident</a>

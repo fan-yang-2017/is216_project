@@ -69,7 +69,7 @@
                             <a class="nav-link" href="mrt.php">MRT</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="incident.php">Traffic Incident</a>
+                            <a class="nav-link" style="color: blue;" href="incident.php">Traffic Incident</a>
                         </li>
                     </ul>
 

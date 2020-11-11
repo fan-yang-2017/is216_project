@@ -87,7 +87,7 @@
               <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="bus.php">Bus</a>
+                      <a class="nav-link"  style="color: blue;" href="bus.php">Bus</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="mrt.php">MRT</a>
