@@ -1,4 +1,12 @@
-<!Doctype html>
+<?php
+    require_once 'common.php';
+
+    $username = '';
+    if (isset($_SESSION['login_page'])) {
+        $username = $_SESSION['login_page'];
+    }
+?>
+
 <html lang="en">
     <head>
         <!-- Required meta tags -->
@@ -42,7 +50,6 @@
 
             .form-signin {
                 width: 100%;
-                max-width: 330px;
                 padding: 15px;
                 margin: auto;
             }
@@ -63,16 +70,18 @@
                 z-index: 2;
             }
 
-            .form-signin input[type="email"] {
+            .form-signin input[type="text"] {
                 margin-bottom: -1px;
                 border-bottom-right-radius: 0;
                 border-bottom-left-radius: 0;
+                max-width: 330px;
             }
 
             .form-signin input[type="password"] {
                 margin-bottom: 10px;
                 border-top-left-radius: 0;
                 border-top-right-radius: 0;
+                max-width: 330px;
             }   
         </style>
     </head>
@@ -80,17 +89,18 @@
     <body class="text-center">
         <form class="form-signin" method="post" action="process_login.php">
             <img class="mb-4" src="img/download.jpeg" alt="" width="72" height="72">
-            <h1 class="h3 mb-3 font-weight-normal">Please Log in</h1>
+            <h3 class="mb-3 font-weight-normal">Please Login</h3>
             <div class="form-group">
-                <input type="text" name="username" class="form-control" placeholder="Enter User Name" required autofocus>
+                <input type="text" name="username" class="form-control mx-auto" value="<?= $username?>" placeholder="Enter Username" required autofocus>
             </div>
             
             <div class="form-group ">   
-                <input  type="password" name="password" class="form-control" placeholder="Enter Your Password" required>
+                <input type="password" name="password" class="form-control mx-auto" placeholder="Enter Your Password" required>
             </div>
 
-            <input class="btn btn-lg btn-primary btn-block"  type="submit" value="Login"/>
-            <p class="mt-5 mb-3 text-muted">&copy;2020</p>
+            <input class="btn btn-primary" style="margin-bottom: 5px;" type="submit" value="Login">
+            <?php printErrors();?>
+            <?php printSuccessRegistration();?>
         </form>
     </body>
 </html>

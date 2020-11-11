@@ -1,4 +1,12 @@
-<!Doctype html>
+<?php
+    require_once "common.php";
+
+    $tmp_username = '';
+    if (isset($_SESSION['tmp_username'])) {
+        $tmp_username = $_SESSION['tmp_username'];
+    }
+?>
+
 <html lang="en">
     <head>
         <!-- Required meta tags -->
@@ -7,8 +15,8 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-        <title>Time Traveller - Log In</title>
+    
+        <title>Time Traveller - Sign Up</title>
 
         <style>
             .bd-placeholder-img {
@@ -22,7 +30,7 @@
 
             @media (min-width: 768px) {
                 .bd-placeholder-img-lg {
-                  font-size: 3.5rem;
+                    font-size: 3.5rem;
                 }
             }
 
@@ -42,7 +50,6 @@
 
             .form-signin {
                 width: 100%;
-                max-width: 330px;
                 padding: 15px;
                 margin: auto;
             }
@@ -63,34 +70,41 @@
                 z-index: 2;
             }
 
-            .form-signin input[type="email"] {
+            .form-signin input[type="text"] {
                 margin-bottom: -1px;
                 border-bottom-right-radius: 0;
                 border-bottom-left-radius: 0;
+                max-width: 330px;
             }
 
             .form-signin input[type="password"] {
                 margin-bottom: 10px;
                 border-top-left-radius: 0;
                 border-top-right-radius: 0;
+                max-width: 330px;
             }   
         </style>
     </head>
 
     <body class="text-center">
-        <form class="form-signin" method="post" action="process_login.php">
+        <form class="form-signin d-block" method="post" action="process_register.php">
             <img class="mb-4" src="img/download.jpeg" alt="" width="72" height="72">
-            <h1 class="h3 mb-3 font-weight-normal">Please Log in</h1>
+            <h3 class="mb-3 font-weight-normal">Sign up for New Account</h3>
             <div class="form-group">
-                <input type="text" name="username" class="form-control" placeholder="Enter User Name" required autofocus>
-            </div>
-            
-            <div class="form-group ">   
-                <input  type="password" name="password" class="form-control" placeholder="Enter Your Password" required>
+                <input type="text" name="username" class="form-control mx-auto" value="<?= $tmp_username?>" placeholder="Enter Username" required autofocus>
             </div>
 
-            <input class="btn btn-lg btn-primary btn-block"  type="submit" value="Login"/>
-            <p class="mt-5 mb-3 text-muted">&copy;2020</p>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control mx-auto" placeholder="Enter Your Password" required>
+            </div>
+
+            <div class="form-group">        
+                <input type="password" name="confirm_password" class="form-control mx-auto" placeholder="Confirm Your Password" required>
+            </div>
+        
+            <input type="submit" name="submit" class="btn btn-primary" value="Register">
+            <p> Already have an account? <a href = "login.php">Login here</a></p>
+            <?php printErrors();?>
         </form>
     </body>
 </html>

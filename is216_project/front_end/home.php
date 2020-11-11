@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+<?php
+    require_once 'common.php';
+
+    $username = '';
+    if (isset($_SESSION["user"])) {
+        $username = $_SESSION["user"];
+    } else {
+        header("Location: before_home.html");
+    }
+?>
+
 <html lang="en">
     <head>
         <!-- Required meta tags -->
@@ -10,16 +20,16 @@
         
         <!-- External CSS -->
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
         
         <title>Time Traveller - Home Page</title>
 
         <style>
-            .card{
+            .card {
                 height:420px;
             }
 
-            .card img{  
+            .card img {  
                 height:250px;
             }
 
@@ -30,18 +40,18 @@
                 background-color:floralwhite;
             }
             
-            #main{
+            #main {
                 position: relative;
-                height:72%;
+                height: 72%;
                 background-image: url("img/Screenshot\ 2020-10-24\ at\ 2.09.02\ PM\ 2.png");
-                padding:150px;
+                padding: 150px;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-attachment: scroll;
                 background-size: cover;
             }  
 
-            footer{
+            footer {
                 margin-top: 10px;
             }
             
@@ -49,72 +59,24 @@
                 box-sizing: border-box;
             }
 
-            /* Create two unequal columns that floats next to each other */
-            .column {
-                float: left;
-                padding: 10px;
-            }
-
-            .left {
-                width: 40%;
-            }
-
-            .right {
-                width: 55%;
-            }   
-
             /* Clear floats after the columns */
             .row:after {
                 content: "";
                 display: table;
                 clear: both;
             }
-          
-            .search-container{
-                margin:30px;
-                padding:10px;
-                border:solid 0.5px;
-                border-radius: 15%;;
-            }
-
-            .search-container button {
+    
+            button {
                 border: none;
                 cursor: pointer;
-            }
-
-            .radio{
-                padding-left: 50px;
-                padding-bottom:20px;
-                padding-top: 20px;
-            }
-
-            h3{
-                margin-left:50px;
-            }
-
-            h2{
-                text-align: center;
-                font-family:monospace;
-            }
-
-            table{
-                margin-top: 50px;
-            }
-
-            #map {
-                width: 90%;
-                height: 65%;
-                margin-left:80px;
-                justify-content: center;
-            }
-        
+            }        
         </style>
     </head>
     <body >
         <!-- Navigation-->
         <header>
             <nav class="navbar navbar-expand-md">
-                <a class="navbar-brand" href="home.html">
+                <a class="navbar-brand" href="home.php">
                     <img src="img/download.jpeg" width="30" height="30" alt="logo">
                     Time Traveller
                 </a> 
@@ -134,16 +96,20 @@
                         </li>
                     </ul>
                     <nav class="form-inline mt-2 mt-md-0">
-                        <a class="navbar-brand" href="one.html">
+                        Welcome, <?= $username?>! 
+                        <a class="navbar-brand" href="logout.php">
+                            <img src="img/account.jpg" style="margin-left: 5px;" width="30" height="30" alt="logo">
+                        </a>
+                        <!--<a class="navbar-brand" href="one.html">
                             <img src="img/account.jpg" width="30" height="30" alt="logo">
-                        </a>  
+                        </a>--> 
                     </nav>
                 </div>
             </nav>
         </header>
 
         <div class="container-fluid" id="main">
-            <div class="row  align-items-center justify-content-center text-center">
+            <div class="row align-items-center justify-content-center text-center">
                 <div class="col-lg-10 align-self-end">
                     <h1 class="display-3 text-uppercase text-white font-weight-bold">Save your time</h1>
                     <hr class="divider my-4" />
