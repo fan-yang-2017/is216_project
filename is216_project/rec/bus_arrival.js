@@ -54,8 +54,17 @@ function sendFormData(){
 }
 
 function getBusArrival(busNo){
-    var bus = busNo.options[busNo.selectedIndex].text;
-    // console.log(bus);
+    // multi select push to list
+    var opts = [], opt;
+    
+    for (var i=0, len=busNo.options.length; i<len; i++) {
+        opt = busNo.options[i];
+        // check if selected
+        if ( opt.selected ) {
+            // add to array of option elements to return from this function
+            opts.push(opt.value);
+        }
+    }
     
     //sending data to php file
     var formData = new FormData();
@@ -84,110 +93,110 @@ function getBusArrival(busNo){
         var output = "";
 
         for (i of data) {
-            if (i.ServiceNo == bus) {
-                var rawNextDate = i.NextBus.EstimatedArrival;
-                var rawNext2Date = i.NextBus2.EstimatedArrival;
-                // var rawNext3Date = i.NextBus3.EstimatedArrival;
+            for (var k=0, len=opts.length; k<len; k++) {
+                if (i.ServiceNo == opts[k]) {
+                    var rawNextDate = i.NextBus.EstimatedArrival;
+                    var rawNext2Date = i.NextBus2.EstimatedArrival;
+                    // var rawNext3Date = i.NextBus3.EstimatedArrival;
 
-                // set retrieved time into javascript date format
-                var nextbus = new Date(rawNextDate);
-                var nextbus2 = new Date(rawNext2Date);
+                    // set retrieved time into javascript date format
+                    var nextbus = new Date(rawNextDate);
+                    var nextbus2 = new Date(rawNext2Date);
 
-                // var nextbus3 = new Date(rawNext3Date);
+                    // var nextbus3 = new Date(rawNext3Date);
 
-                // bus service info check
-                // console.log(i);
+                    // bus service info check
+                    // console.log(i);
 
-                // covert from miliseconds to seconds to minutes
-                var nextBusTime = Math.floor(((nextbus.getTime() - d.getTime())/1000)/60);
-                var nextBus2Time = Math.floor(((nextbus2.getTime() - d.getTime())/1000)/60);
-                // var nextBus3Time = Math.floor(((nextbus3.getTime() - d.getTime())/1000)/60);
+                    // covert from miliseconds to seconds to minutes
+                    var nextBusTime = Math.floor(((nextbus.getTime() - d.getTime())/1000)/60);
+                    var nextBus2Time = Math.floor(((nextbus2.getTime() - d.getTime())/1000)/60);
+                    // var nextBus3Time = Math.floor(((nextbus3.getTime() - d.getTime())/1000)/60);
 
-                output += "<tr>";
-                output += "<td>" + i.ServiceNo + "</td>";
+                    output += "<tr>";
+                    output += "<td>" + i.ServiceNo + "</td>";
 
-                // fix bug if no more bus services
-                if (rawNextDate !== "") {
-                    if (nextBusTime <= 0) {
-                        output += "<td>Arriving</td>";
+                    // fix bug if no more bus services
+                    if (rawNextDate !== "") {
+                        if (nextBusTime <= 0) {
+                            output += "<td>Arriving</td>";
+                        }
+                        else {
+                            output += "<td>" + nextBusTime + " mins</td>";
+                        }
                     }
                     else {
-                        output += "<td>" + nextBusTime + " mins</td>";
+                        output += "<td>-</td>";
                     }
-                }
-                else {
-                    output += "<td>-</td>";
-                }
 
-                if (rawNext2Date !== "") {
-                    if (nextBus2Time <= 0) {
-                        output += "<td>Arriving</td>";
-                    } 
-                    else {
-                        output += "<td>" + nextBus2Time + " mins</td>";
-                    }
-                }
-                else {
-                    output += "<td>-</td>";
-                }
-                    
-                output += "</tr>"
-
-                document.getElementById("arrival_time").innerHTML = output;
-            }
-            else if (bus == "All buses") {
-                var rawNextDate = i.NextBus.EstimatedArrival;
-                var rawNext2Date = i.NextBus2.EstimatedArrival;
-                // var rawNext3Date = i.NextBus3.EstimatedArrival;
-
-                // set retrieved time into javascript date format
-                var nextbus = new Date(rawNextDate);
-                var nextbus2 = new Date(rawNext2Date);
-
-                // var nextbus3 = new Date(rawNext3Date);
-
-                // bus service info check
-                // console.log(i);
-
-                // covert from miliseconds to seconds to minutes
-                var nextBusTime = Math.floor(((nextbus.getTime() - d.getTime())/1000)/60);
-                var nextBus2Time = Math.floor(((nextbus2.getTime() - d.getTime())/1000)/60);
-                // var nextBus3Time = Math.floor(((nextbus3.getTime() - d.getTime())/1000)/60);
-
-                output += "<tr>";
-                output += "<td>" + i.ServiceNo + "</td>";
-
-                // fix bug if no more bus services
-                if (rawNextDate !== "") {
-                    if (nextBusTime <= 0) {
-                        output += "<td>Arriving</td>";
+                    if (rawNext2Date !== "") {
+                        if (nextBus2Time <= 0) {
+                            output += "<td>Arriving</td>";
+                        } 
+                        else {
+                            output += "<td>" + nextBus2Time + " mins</td>";
+                        }
                     }
                     else {
-                        output += "<td>" + nextBusTime + " mins</td>";
+                        output += "<td>-</td>";
                     }
-                }
-                else {
-                    output += "<td>-</td>";
-                }
+                        
+                    output += "</tr>"
 
-                if (rawNext2Date !== "") {
-                    if (nextBus2Time <= 0) {
-                        output += "<td>Arriving</td>";
-                    } 
+                    document.getElementById("arrival_time").innerHTML = output;
+                }
+                else if (opts[k] == "all") {
+                    var rawNextDate = i.NextBus.EstimatedArrival;
+                    var rawNext2Date = i.NextBus2.EstimatedArrival;
+                    // var rawNext3Date = i.NextBus3.EstimatedArrival;
+    
+                    // set retrieved time into javascript date format
+                    var nextbus = new Date(rawNextDate);
+                    var nextbus2 = new Date(rawNext2Date);
+    
+                    // var nextbus3 = new Date(rawNext3Date);
+    
+                    // bus service info check
+                    // console.log(i);
+    
+                    // covert from miliseconds to seconds to minutes
+                    var nextBusTime = Math.floor(((nextbus.getTime() - d.getTime())/1000)/60);
+                    var nextBus2Time = Math.floor(((nextbus2.getTime() - d.getTime())/1000)/60);
+                    // var nextBus3Time = Math.floor(((nextbus3.getTime() - d.getTime())/1000)/60);
+    
+                    output += "<tr>";
+                    output += "<td>" + i.ServiceNo + "</td>";
+    
+                    // fix bug if no more bus services
+                    if (rawNextDate !== "") {
+                        if (nextBusTime <= 0) {
+                            output += "<td>Arriving</td>";
+                        }
+                        else {
+                            output += "<td>" + nextBusTime + " mins</td>";
+                        }
+                    }
                     else {
-                        output += "<td>" + nextBus2Time + " mins</td>";
+                        output += "<td>-</td>";
                     }
+    
+                    if (rawNext2Date !== "") {
+                        if (nextBus2Time <= 0) {
+                            output += "<td>Arriving</td>";
+                        } 
+                        else {
+                            output += "<td>" + nextBus2Time + " mins</td>";
+                        }
+                    }
+                    else {
+                        output += "<td>-</td>";
+                    }
+                    output += "</tr>"
+        
+                    document.getElementById("arrival_time").innerHTML = output;
                 }
-                else {
-                    output += "<td>-</td>";
-                }
-                    
-                output += "</tr>"
-
-                document.getElementById("arrival_time").innerHTML = output;
             }
         }
-
     }
 
     request.open("POST", url, true);
