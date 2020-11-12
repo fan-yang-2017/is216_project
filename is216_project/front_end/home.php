@@ -130,7 +130,7 @@
                         <p class="card-text">Get Bus arrival time</p>
                         <img class="card-img-top" src="img/busstop.jpg" alt="Card image cap">
                         <div class="card-body">
-                            <a class="btn  btn-outline-info" href="bus.html" role="button">Find Out &raquo;</a>
+                            <a class="btn  btn-outline-info" href="bus.php" role="button">Find Out &raquo;</a>
                         </div>
                     </div>
                 </div><!-- /.col-lg-4 -->
@@ -141,7 +141,7 @@
                         <p class="card-text">Know MRT breakdown info</p>
                         <img class="card-img-top" src="img/mrtphoto.jpg" alt="Card image cap">
                         <div class="card-body">
-                          <a class="btn  btn-outline-info" href="mrt.html" role="button">Find Out  &raquo;</a>
+                          <a class="btn  btn-outline-info" href="mrt.php" role="button">Find Out  &raquo;</a>
                         </div>
                     </div>
                 </div><!-- /.col-lg-4 -->
@@ -153,7 +153,7 @@
                       <img class="card-img-top" src="img/express.jpg" alt="Card image cap" >
                       <div class="card-body">
                           <!-- <a class="btn  btn-outline-info" href="roadwork.html" role="button">Road Work &raquo;</a> -->
-                          <a class="btn  btn-outline-info" href="incident.html" role="button">Find Out &raquo;</a>
+                          <a class="btn  btn-outline-info" href="incident.php" role="button">Find Out &raquo;</a>
                       </div>
                   </div><!-- /.col-lg-4 -->
               </div><!-- /.row -->
