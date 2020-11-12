@@ -16,7 +16,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         
         <!-- External CSS -->
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -79,7 +80,7 @@
                     <img src="img/download.jpeg" width="30" height="30" alt="logo">
                     Time Traveller
                 </a> 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarCollapse" >
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -117,7 +118,7 @@
        
         <div class="container-fluid text-center" id="select">
             <div class="row justify-content-center">
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-2 col-sm-1">
                       <div class="card card-cascade wider" style="margin-top:30px">
 
                             <!-- Card image -->
@@ -143,7 +144,7 @@
                         </div>
                 </div><!-- /.col-lg-3 -->
 
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-2 col-sm-1">
                       <div class="card card-cascade wider" style="margin-top:30px">
 
                             <!-- Card image -->
@@ -168,7 +169,7 @@
                             </div>
                         </div>
                 </div><!-- /.col-lg-3 -->
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-2 col-sm-1">
                       <div class="card card-cascade wider" style="margin-top:30px">
 
                             <!-- Card image -->
@@ -205,5 +206,8 @@
                 <div class="small text-center text-muted">© 2020Copyright:Time Traveller</div>
             </div>
         </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     </body>
 </html>
