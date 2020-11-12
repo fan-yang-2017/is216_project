@@ -117,7 +117,7 @@
                 <div class="col-lg-8 align-self-baseline">
                     <p class="font-weight-light text-white mb-5">Know the current traffic situation</p>
                 </div>
-             </div>
+            </div>
         </div>
        
         <div class="container-fluid text-center" id="select">

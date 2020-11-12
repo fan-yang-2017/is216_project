@@ -84,6 +84,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
+
               <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
@@ -101,10 +102,10 @@
                   <a class="navbar-brand" href="logout.php">
                       <img src="img/account.jpg" style="margin-left: 5px;" width="30" height="30" alt="logo">
                   </a>
-              </nav>
+                </nav>
               </div>
             </nav>
-          </header>
+         </header>
 
           <div class="container" id="bus">
             <h2>Bus Info</h2>
