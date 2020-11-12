@@ -81,7 +81,7 @@
                     <img src="img/download.jpeg" width="30" height="30" alt="logo">
                     Time Traveller
                 </a> 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -99,9 +99,8 @@
                 </ul>
                 <nav class="form-inline mt-2 mt-md-0">
                   Welcome, <?= $username?>! 
-                  <a class="navbar-brand" href="logout.php">
-                      <img src="img/account.jpg" style="margin-left: 5px;" width="30" height="30" alt="logo">
-                  </a>
+                    <img src="img/account.jpg" style="margin-left: 5px;" width="30" height="30" alt="logo">
+                    <a class="nav-link" href="logout.php">Log out</a>
                 </nav>
               </div>
             </nav>

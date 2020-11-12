@@ -137,9 +137,9 @@
                                 <!-- Subtitle -->
                                 <h5 class="blue-text pb-2"><strong>Get Bus arrival time</strong></h5>
                                 <!-- Button -->
-                                <div class="card-body">
+                                <!-- <div class="card-body"> -->
                                     <a class="btn  btn-outline-info" href="bus.php" role="button">Find Out &raquo;</a>
-                                </div>
+                                <!-- </div> -->
                             </div>
                         </div>
                 </div><!-- /.col-lg-3 -->
