@@ -283,7 +283,7 @@ function refresh(busNo){
                                 if (nextBusTime <= 0){
                                     cell.innerHTML = 'Arriving';
                                 }else{
-                                    cell.innerHTML = nextBusTime + 'mins';
+                                    cell.innerHTML = nextBusTime + ' mins';
                                 }
                             }else{
                                 cell.innerHTML = '-';
@@ -293,7 +293,7 @@ function refresh(busNo){
                                 if (nextBus2Time <= 0){
                                     cell.innerHTML = 'Arriving';
                                 }else{
-                                    cell.innerHTML = nextBus2Time + 'mins';
+                                    cell.innerHTML = nextBus2Time + ' mins';
                                 }
                             }else{
                                 cell.innerHTML = '-';
@@ -333,7 +333,7 @@ function refresh(busNo){
                                 if (nextBusTime <= 0){
                                     cell.innerHTML = 'Arriving';
                                 }else{
-                                    cell.innerHTML = nextBusTime + 'mins';
+                                    cell.innerHTML = nextBusTime + ' mins';
                                 }
                             }else{
                                 cell.innerHTML = '-';
@@ -343,7 +343,7 @@ function refresh(busNo){
                                 if (nextBus2Time <= 0){
                                     cell.innerHTML = 'Arriving';
                                 }else{
-                                    cell.innerHTML = nextBus2Time + 'mins';
+                                    cell.innerHTML = nextBus2Time + ' mins';
                                 }
                             }else{
                                 cell.innerHTML = '-';
