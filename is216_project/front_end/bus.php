@@ -149,9 +149,14 @@
                     
                   </tr>
                 </thead>
-                <tbody id="arrival_time">
-
-                </tbody>
+                <tbody id="arrival_time"></tbody>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td><button class="btn btn-secondary pull-right" type="button" onclick='refresh(document.getElementById("bus_display"))'>Refresh</button></td>
+                    <td></td>
+                  </tr>
+                </tbody>                
             </table>
           </div>
         <!-- Footer-->

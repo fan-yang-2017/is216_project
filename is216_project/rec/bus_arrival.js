@@ -206,4 +206,159 @@ function getBusArrival(busNo){
     request.send(formData);
 }
 
+function refresh(busNo){
+    // console.log(busNo);
+    // console.log(busNo.options.length);
+    var opts = [], opt;
+
+    for (var i=0, len=busNo.options.length; i<len; i++){
+        opt = busNo.options[i];
+        // console.log(opt.selected);
+        if (opt.selected && opt.value == "all"){
+            opts = ["all"];
+        }else if (opt.selected && !opts.includes("all")){
+            opts.push(opt.value);
+        }
+    }
+
+    // console.log(opts);
+
+    //sending data to php file
+    var formData = new FormData();
+    // console.log(formData);
+    var bs_code = document.getElementById("bs_code").value;
+    // console.log(bs_code);
+
+    formData.append("bs_code",bs_code); 
+    // for(var pair of formData.entries()) {
+    //     console.log(pair[0]+', '+pair[1]);
+    //   }
+
+    var url = "../rec/busArrivalAPI.php";
+    var request = new XMLHttpRequest();
+
+    request.onload = function(){
+        var data = JSON.parse(this.responseText).Services;
+
+        if (bus !== null ) {
+            arrival_table.classList.remove("d-none");
+        }
+
+        // current time
+        var d = new Date();
+
+        var old_table = document.getElementById('arrival_time');
+        var output_table = document.createElement('tbody');
+        var cols = 3;
+
+        for (i of data) {
+            for (var k=0, len=opts.length; k<len; k++) {
+                if (i.ServiceNo == opts[k]) {
+                    var rawNextDate = i.NextBus.EstimatedArrival;
+                    var rawNext2Date = i.NextBus2.EstimatedArrival;
+                    // var rawNext3Date = i.NextBus3.EstimatedArrival;
+
+                    // set retrieved time into javascript date format
+                    var nextbus = new Date(rawNextDate);
+                    var nextbus2 = new Date(rawNext2Date);
+
+                    // var nextbus3 = new Date(rawNext3Date);
+
+                    // bus service info check
+                    // console.log(i);
+
+                    // covert from miliseconds to seconds to minutes
+                    var nextBusTime = Math.floor(((nextbus.getTime() - d.getTime())/1000)/60);
+                    var nextBus2Time = Math.floor(((nextbus2.getTime() - d.getTime())/1000)/60);
+                    // var nextBus3Time = Math.floor(((nextbus3.getTime() - d.getTime())/1000)/60);
+
+                    var row = output_table.insertRow(-1);
+                    for (var c = 0; c<cols; c++){
+                        var cell = row.insertCell(-1);//create an empty table
+                        if (c == 0){
+                            cell.setAttribute('id','bus_number');
+                            cell.innerHTML = i.ServiceNo;
+                        }else if (c == 1){
+                            if (rawNextDate !== ""){
+                                if (nextBusTime <= 0){
+                                    cell.innerHTML = 'Arriving';
+                                }else{
+                                    cell.innerHTML = nextBusTime + 'mins';
+                                }
+                            }else{
+                                cell.innerHTML = '-';
+                            }
+                        }else if (c == 2){
+                            if (rawNext2Date !== ""){
+                                if (nextBus2Time <= 0){
+                                    cell.innerHTML = 'Arriving';
+                                }else{
+                                    cell.innerHTML = nextBus2Time + 'mins';
+                                }
+                            }else{
+                                cell.innerHTML = '-';
+                            }
+                        }
+
+                    }
+
+
+                }else if (opts[k] == "all"){
+                    var rawNextDate = i.NextBus.EstimatedArrival;
+                    var rawNext2Date = i.NextBus2.EstimatedArrival;
+                    // var rawNext3Date = i.NextBus3.EstimatedArrival;
+
+                    // set retrieved time into javascript date format
+                    var nextbus = new Date(rawNextDate);
+                    var nextbus2 = new Date(rawNext2Date);
+
+                    // var nextbus3 = new Date(rawNext3Date);
+
+                    // bus service info check
+                    // console.log(i);
+
+                    // covert from miliseconds to seconds to minutes
+                    var nextBusTime = Math.floor(((nextbus.getTime() - d.getTime())/1000)/60);
+                    var nextBus2Time = Math.floor(((nextbus2.getTime() - d.getTime())/1000)/60);
+                    // var nextBus3Time = Math.floor(((nextbus3.getTime() - d.getTime())/1000)/60);
+
+                    var row = output_table.insertRow(-1);
+                    for (var c = 0; c<cols; c++){
+                        var cell = row.insertCell(-1);//create an empty table
+                        if (c == 0){
+                            cell.setAttribute('id','bus_number');
+                            cell.innerHTML = i.ServiceNo;
+                        }else if (c == 1){
+                            if (rawNextDate !== ""){
+                                if (nextBusTime <= 0){
+                                    cell.innerHTML = 'Arriving';
+                                }else{
+                                    cell.innerHTML = nextBusTime + 'mins';
+                                }
+                            }else{
+                                cell.innerHTML = '-';
+                            }
+                        }else if (c == 2){
+                            if (rawNext2Date !== ""){
+                                if (nextBus2Time <= 0){
+                                    cell.innerHTML = 'Arriving';
+                                }else{
+                                    cell.innerHTML = nextBus2Time + 'mins';
+                                }
+                            }else{
+                                cell.innerHTML = '-';
+                            }
+                        }
+
+                    }                    
+                }
+            }
+        }
+        old_table.parentNode.replaceChild(output_table,old_table);
+        output_table.setAttribute('id','arrival_time');
+    }
+    request.open("POST", url, true);
+    request.send(formData);
+
+}
 
