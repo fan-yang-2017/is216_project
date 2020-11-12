@@ -32,8 +32,9 @@ function sendFormData(){
 
     if (bs_code  == ''){
         alert("Please choose a bus stop code.");
-    }else if (!busStopCodes.includes(bs_code)){
-        alert("Please enter a valid bus stop code.")
+    // }else if (!busStopCodes.includes(bs_code)){
+    //     alert("Please enter a valid bus stop code.")
+    // }
     }else{
         var bus_display = document.getElementById("bus_display");
 
