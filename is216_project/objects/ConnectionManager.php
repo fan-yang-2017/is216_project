@@ -4,7 +4,7 @@
             $servername = "localhost";
             $username = "root";
             $password = "root";
-            $dbname = "users";
+            $dbname = "user";
             $port = "3306";
             
             // Create connection
