@@ -77,7 +77,7 @@
         <!-- Navigation-->
         <header>
             <nav class="navbar navbar-expand-md">
-                <a class="navbar-brand" href="home.html">
+                <a class="navbar-brand" href="home.php">
                     <img src="img/download.jpeg" width="30" height="30" alt="logo">
                     Time Traveller
                 </a> 
