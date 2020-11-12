@@ -99,10 +99,11 @@
         </div> 
         
         <!-- Footer-->
-        <footer class="bg-light">
-            <div class="container"><div class="small text-center text-muted">Time Traveller</div></div>
+        <footer>
+            <div class="container">
+                <div class="small text-center text-muted">© 2020:Time Traveller</div>
+            </div>
         </footer>
-
         <script defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3nD9MqQk2qELQG2RWfHixIHnX1MzQ86o&callback=initMap">
         </script>

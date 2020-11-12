@@ -109,16 +109,9 @@
 
           <div class="container" id="bus">
             <h2>Bus Info</h2>
-
-            <!-- <div class="input-group mb-3">
-              <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">Button</button>
-              </div>
-              <input type="text" class="form-control">
-            </div> -->
             
             <form autocomplete="off">
-              <!-- <div class="form-group"> -->
+             
                 <div class="autocomplete" name="busCodeForm">                   
                     <label for="bs_code">Plese enter bus stop code:</label>
                     <div class="form-inline">
@@ -132,10 +125,6 @@
                 <div id="div2" class="d-none">
                   <label for="sel2">Select Bus number</label>
                   <select multiple class="form-control" id="bus_display" onchange="getBusArrival(this)">
-                    <!-- <option>1</option>
-                    <option>2</option>
-                    <option>3</option> -->
-                    
                   </select>
                 </div>
             </form>
@@ -160,10 +149,10 @@
             </table>
           </div>
         <!-- Footer-->
-        <footer class="bg-light">
-          <div class="container">
-            <div class="small text-center text-muted">Time Traveller</div>
-          </div>
+        <footer>
+            <div class="container">
+                <div class="small text-center text-muted">© 2020:Time Traveller</div>
+            </div>
         </footer>
         <script type="text/javascript" src="../rec/busstop.js"></script>
         <script type="text/javascript" src="../rec/bus_arrival.js"></script>

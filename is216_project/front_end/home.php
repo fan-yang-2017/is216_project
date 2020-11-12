@@ -69,7 +69,8 @@
             button {
                 border: none;
                 cursor: pointer;
-            }        
+            } 
+                
         </style>
     </head>
     <body >
@@ -157,8 +158,10 @@
         </div>
         
         <!-- Footer-->
-        <footer class="bg-light">
-            <div class="container"><div class="small text-center text-muted">Time Traveller</div></div>
+        <footer>
+            <div class="container">
+                <div class="small text-center text-muted">© 2020:Time Traveller</div>
+            </div>
         </footer>
     </body>
 </html>
