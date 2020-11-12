@@ -29,9 +29,7 @@
                 height:420px;
             }
 
-            .card img {  
-                height:250px;
-            }
+           
 
             html, body {
                 height: 100%;
@@ -118,49 +116,93 @@
         </div>
        
         <div class="container-fluid text-center" id="select">
-
-            <!-- Three columns of text below the carousel -->
             <div class="row justify-content-center">
-                <div class="col-lg-4">
-                    <div class="card" style=" background-color: rgb(242, 247, 204); margin-top: 30px;">
-                        <h4 class="font-weight-bold">Bus</h4>
-                        <p class="card-text">Get Bus arrival time</p>
-                        <img class="card-img-top" src="img/busstop.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <a class="btn  btn-outline-info" href="bus.php" role="button">Find Out &raquo;</a>
-                        </div>
-                    </div>
-                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-3">
+                      <div class="card card-cascade wider" style="margin-top:30px">
 
-                <div class="col-lg-4">
-                    <div class="card" style="background-color:lavenderblush; margin-top: 30px; ">
-                        <h4 class="font-weight-bold">MRT</h4>
-                        <p class="card-text">Know MRT breakdown info</p>
-                        <img class="card-img-top" src="img/mrtphoto.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <a class="btn  btn-outline-info" href="mrt.php" role="button">Find Out  &raquo;</a>
-                        </div>
-                    </div>
-                </div><!-- /.col-lg-4 -->
+                            <!-- Card image -->
+                            <div class="view view-cascade overlay">
+                            <img class="card-img-top" src="img/Bus.jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                            </div>
 
-              <div class="col-lg-4">
-                  <div class="card" style="background-color: rgb(228, 250, 250); margin-top: 30px; ">
-                      <h4 class="font-weight-bold">Drive</h4>
-                      <p class="card-text">Know latest Traffic info</p>
-                      <img class="card-img-top" src="img/express.jpg" alt="Card image cap" >
-                      <div class="card-body">
-                          <!-- <a class="btn  btn-outline-info" href="roadwork.html" role="button">Road Work &raquo;</a> -->
-                          <a class="btn  btn-outline-info" href="incident.php" role="button">Find Out &raquo;</a>
-                      </div>
-                  </div><!-- /.col-lg-4 -->
-              </div><!-- /.row -->
-            </div>
+                            <!-- Card content -->
+                            <div class="card-body card-body-cascade text-center">
+
+                                <!-- Title -->
+                                <h4 class="card-title"><strong>Bus</strong></h4>
+                                <!-- Subtitle -->
+                                <h5 class="blue-text pb-2"><strong>Get Bus arrival time</strong></h5>
+                                <!-- Button -->
+                                <div class="card-body">
+                                    <a class="btn  btn-outline-info" href="bus.php" role="button">Find Out &raquo;</a>
+                                </div>
+                            </div>
+                        </div>
+                </div><!-- /.col-lg-3 -->
+
+                <div class="col-lg-3">
+                      <div class="card card-cascade wider" style="margin-top:30px">
+
+                            <!-- Card image -->
+                            <div class="view view-cascade overlay">
+                            <img class="card-img-top" src="img/mrtphoto.jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body card-body-cascade text-center">
+
+                                <!-- Title -->
+                                <h4 class="card-title"><strong>MRT</strong></h4>
+                                <!-- Subtitle -->
+                                <h5 class="blue-text pb-2"><strong>Know MRT breakdown info</strong></h5>
+                                <!-- Button -->
+                                <div class="card-body">
+                                    <a class="btn  btn-outline-info" href="mrt.php" role="button">Find Out &raquo;</a>
+                                </div>
+                            </div>
+                        </div>
+                </div><!-- /.col-lg-3 -->
+                <div class="col-lg-3">
+                      <div class="card card-cascade wider" style="margin-top:30px">
+
+                            <!-- Card image -->
+                            <div class="view view-cascade overlay">
+                            <img class="card-img-top" src="img/express.jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body card-body-cascade text-center">
+
+                                <!-- Title -->
+                                <h4 class="card-title"><strong>Drive</strong></h4>
+                                <!-- Subtitle -->
+                                <h5 class="blue-text pb-2"><strong>Know MRT breakdown info</strong></h5>
+                                <!-- Button -->
+                                <div class="card-body">
+                                    <a class="btn  btn-outline-info" href="incident.php" role="button">Find Out &raquo;</a>
+                                </div>
+                            </div>
+                        </div>
+                </div><!-- /.col-lg-3 -->
+                
+              
+            </div><!-- /.row -->
         </div>
+       
         
         <!-- Footer-->
         <footer>
             <div class="container">
-                <div class="small text-center text-muted">© 2020:Time Traveller</div>
+                <div class="small text-center text-muted">© 2020Copyright:Time Traveller</div>
             </div>
         </footer>
     </body>

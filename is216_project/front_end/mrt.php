@@ -123,10 +123,10 @@
         <!-- Footer-->
         <footer>
             <div class="container">
-                <div class="small text-center text-muted">© 2020:Time Traveller</div>
+                <div class="small text-center text-muted">© 2020Copyright:Time Traveller</div>
             </div>
         </footer>
-        
+
         <script>     
             function initMap() {
             const map = new google.maps.Map(document.getElementById("map"), {

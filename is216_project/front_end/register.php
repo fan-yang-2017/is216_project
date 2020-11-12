@@ -106,5 +106,10 @@
             <p> Already have an account? <a href = "login.php">Login here</a></p>
             <?php printErrors();?>
         </form>
+        <footer>
+            <div class="container">
+                <div class="small text-center text-muted">© 2020Copyright:Time Traveller</div>
+            </div>
+        </footer>
     </body>
 </html>
