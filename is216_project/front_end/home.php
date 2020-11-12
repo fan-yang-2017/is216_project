@@ -118,7 +118,7 @@
        
         <div class="container-fluid text-center" id="select">
             <div class="row justify-content-center">
-                <div class="col-lg-3 col-md-2 col-sm-1">
+                <div class="col-lg-3 col-md-3 col-sm-6">
                       <div class="card card-cascade wider" style="margin-top:30px">
 
                             <!-- Card image -->
@@ -144,7 +144,7 @@
                         </div>
                 </div><!-- /.col-lg-3 -->
 
-                <div class="col-lg-3 col-md-2 col-sm-1">
+                <div class="col-lg-3 col-md-3 col-sm-6">
                       <div class="card card-cascade wider" style="margin-top:30px">
 
                             <!-- Card image -->
@@ -169,7 +169,7 @@
                             </div>
                         </div>
                 </div><!-- /.col-lg-3 -->
-                <div class="col-lg-3 col-md-2 col-sm-1">
+                <div class="col-lg-3 col-md-3 col-sm-6">
                       <div class="card card-cascade wider" style="margin-top:30px">
 
                             <!-- Card image -->
