@@ -119,7 +119,7 @@
             
             <form autocomplete="off">
               <!-- <div class="form-group"> -->
-                <div class="autocomplete">                   
+                <div class="autocomplete" name="busCodeForm">                   
                     <label for="bs_code">Plese enter bus stop code:</label>
                     <div class="form-inline">
                       <input type="text" class="form-control" id="bs_code" name="bs_code" placeholder="eg.83189">
@@ -153,7 +153,7 @@
                 <tbody>
                   <tr>
                     <td></td>
-                    <td><button class="btn btn-secondary pull-right" type="button" onclick='refresh(document.getElementById("bus_display"))'>Refresh</button></td>
+                    <td><button class="btn btn-secondary pull-right shadow-none" type="button" onclick='refresh(document.getElementById("bus_display"))'>Refresh</button></td>
                     <td></td>
                   </tr>
                 </tbody>                
