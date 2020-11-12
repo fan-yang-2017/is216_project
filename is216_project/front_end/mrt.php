@@ -100,12 +100,11 @@
                       <a class="nav-link" href="incident.php">Traffic Incident</a>
                     </li>
                   </ul>
-                <nav class="form-inline mt-2 mt-md-0">
-                    Welcome, <?= $username?>! 
-                    <a class="navbar-brand" href="logout.php">
+                  <nav class="form-inline mt-2 mt-md-0">
+                        Welcome, <?= $username?>! 
                         <img src="img/account.jpg" style="margin-left: 5px;" width="30" height="30" alt="logo">
-                    </a>
-                </nav>
+                        <a class="nav-link" href="logout.php">Log out</a>
+                  </nav>
               </div>
             </nav>
           </header>

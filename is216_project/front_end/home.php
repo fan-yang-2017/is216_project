@@ -97,12 +97,8 @@
                     </ul>
                     <nav class="form-inline mt-2 mt-md-0">
                         Welcome, <?= $username?>! 
-                        <a class="navbar-brand" href="logout.php">
-                            <img src="img/account.jpg" style="margin-left: 5px;" width="30" height="30" alt="logo">
-                        </a>
-                        <!--<a class="navbar-brand" href="one.html">
-                            <img src="img/account.jpg" width="30" height="30" alt="logo">
-                        </a>--> 
+                        <img src="img/account.jpg" style="margin-left: 5px;" width="30" height="30" alt="logo">
+                        <a class="nav-link" href="logout.php">Log out</a>
                     </nav>
                 </div>
             </nav>
