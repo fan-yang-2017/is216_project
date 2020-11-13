@@ -106,31 +106,31 @@ function getTrainService() {
       else {
         var html_str = `
       <label for="line1">
-        <input type="checkbox" id="line1" name="mrt_line" value="EWL" onclick="getParticularTrainServiceLive()">East-West Line <span style="color:green;font-weight: bold;">EWL</span>
+        <input type="checkbox" id="line1" name="mrt_line" value="EWL" onclick="getParticularTrainServiceLive()"> East-West Line <span style="color:green;font-weight: bold;">EWL</span>
       </label>
       <br>
       <label for="line2">
-        <input type="checkbox" id="line2" name="mrt_line" value="NSL" onclick="getParticularTrainServiceLive()">North-South Line <span style="color:red;font-weight: bold;">NSL</span>
+        <input type="checkbox" id="line2" name="mrt_line" value="NSL" onclick="getParticularTrainServiceLive()"> North-South Line <span style="color:red;font-weight: bold;">NSL</span>
       </label>
       <br>
       <label for="line3">
-        <input type="checkbox" id="line3" name="mrt_line" value="NEL" onclick="getParticularTrainServiceLive()">North-East Line <span style="color:purple;font-weight: bold;">NEL</span>
+        <input type="checkbox" id="line3" name="mrt_line" value="NEL" onclick="getParticularTrainServiceLive()"> North-East Line <span style="color:purple;font-weight: bold;">NEL</span>
       </label>
       <br>
       <label for="line4">
-        <input type="checkbox" id="line4" name="mrt_line" value="CCL" onclick="getParticularTrainServiceLive()">Circle Line <span style="color:darkorange;font-weight: bold;">CCL</span>
+        <input type="checkbox" id="line4" name="mrt_line" value="CCL" onclick="getParticularTrainServiceLive()"> Circle Line <span style="color:darkorange;font-weight: bold;">CCL</span>
       </label>
       <br>
       <label for="line5">
-        <input type="checkbox" id="line5" name="mrt_line" value="CGL" onclick="getParticularTrainServiceLive()">Circle Line (for Changi Extension) <span style="color:darkorange;;font-weight: bold;">CGL</span>
+        <input type="checkbox" id="line5" name="mrt_line" value="CGL" onclick="getParticularTrainServiceLive()"> Circle Line (for Changi Extension) <span style="color:darkorange;;font-weight: bold;">CGL</span>
       </label>
         <br>
       <label for="line6">
-          <input type="checkbox" id="line6" name="mrt_line" value="CEL" onclick="getParticularTrainServiceLive()">Circle Line (for Circle Line Extension) <span style="color:darkorange;font-weight: bold;">CEL</span>
+          <input type="checkbox" id="line6" name="mrt_line" value="CEL" onclick="getParticularTrainServiceLive()"> Circle Line (for Circle Line Extension) <span style="color:darkorange;font-weight: bold;">CEL</span>
       </label>
        <br>
       <label for="line7">
-        <input type="checkbox" id="line7" name="mrt_line" value="DTL" onclick="getParticularTrainServiceLive()">Downtown Line <span style="color:blue;font-weight: bold;">DTL</span>
+        <input type="checkbox" id="line7" name="mrt_line" value="DTL" onclick="getParticularTrainServiceLive()"> Downtown Line <span style="color:blue;font-weight: bold;">DTL</span>
       </label>
         `;
       }
