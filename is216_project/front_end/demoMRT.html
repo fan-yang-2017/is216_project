@@ -58,11 +58,8 @@
           margin:30px;
         }
         #map {
-        width: 90%;
-        height: 65%;
-        margin-left:80px;
-        justify-content: center;
-      }
+          height: 400px;
+        }
         </style>
     </head>
     <!-- <body onload="getTrainServiceDemo()"> -->
@@ -101,8 +98,10 @@
           <p align="right">
             <a style="margin-right: 40px"class="btn  btn-outline-info" href="mrt.php" role="button">Back to Live  &raquo;</a>
           </p>
-
-             <div id="map"></div>
+          <div class="container">
+            <div id="map"></div>
+          </div>
+             
           
           
           <div class="row justify-content-center" > 
@@ -188,16 +187,6 @@
         <footer class="bg-light">
             <div class="container"><div class="small text-center text-muted">Time Traveller</div></div>
         </footer>
-        <script>     
-            function initMap() {
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 13,
-                center: { lat: 1.296568, lng: 103.852119 },
-            });
-            const transitLayer = new google.maps.TransitLayer();
-            transitLayer.setMap(map);
-}
-          </script>
           <script defer
              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3nD9MqQk2qELQG2RWfHixIHnX1MzQ86o&callback=initMap">
           </script>

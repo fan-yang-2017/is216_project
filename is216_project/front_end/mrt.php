@@ -63,11 +63,8 @@
           margin:30px;
         }
         #map {
-        width: 90%;
-        height: 65%;
-        margin-left:80px;
-        justify-content: center;
-      }
+          height: 400px;
+        }
       .msg{
         text-align: center;
         margin-top: 30px;
@@ -125,19 +122,9 @@
             </div>
         </footer>
 
-        <script>     
-            function initMap() {
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 13,
-                center: { lat: 1.296568, lng: 103.852119 },
-            });
-            const transitLayer = new google.maps.TransitLayer();
-            transitLayer.setMap(map);
-            }
+          <script defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3nD9MqQk2qELQG2RWfHixIHnX1MzQ86o&callback=initMap">
           </script>
-             <script defer
-             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3nD9MqQk2qELQG2RWfHixIHnX1MzQ86o&callback=initMap">
-           </script>
 
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
@@ -145,7 +132,7 @@
 
           <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
           
-          <script src="../rec/TrainService.js"></script>
+          <script type="text/javascript" src="../rec/TrainService.js"></script>
         
     </body>
 </html>

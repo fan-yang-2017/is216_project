@@ -1,3 +1,12 @@
+function initMap() {
+  const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 16,
+      center: { lat: 1.296568, lng: 103.852119 },
+  });
+  const transitLayer = new google.maps.TransitLayer();
+  transitLayer.setMap(map);
+}
+
 
 function getParticularTrainService() {
   var gotLine = false;
