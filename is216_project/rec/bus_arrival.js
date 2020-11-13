@@ -1,12 +1,9 @@
 function sendFormData(){
-    //sending data to php file
-    var formData = new FormData();
-    // console.log(formData);
     var bs_code = document.getElementById("bs_code").value;
     // console.log(bs_code);
 
-    //validation
-    var busStopCodes = [];
+    //get all bus stop codes
+    var busStopCd = new Array();
 
     url ="../rec/busstopAPI.php";
     var request_pre = new XMLHttpRequest();
@@ -21,7 +18,15 @@ function sendFormData(){
             // console.log(records[0].BusStopCode);
             for (var rec of records) {
                 // console.log(rec.BusStopCode);
-                busStopCodes.push(rec.BusStopCode);
+                busStopCd.push(rec.BusStopCode);
+            }
+
+            if (bs_code  == ''){
+                alert("Please choose a bus stop code.");
+            }else if (!busStopCd.includes(bs_code)) {
+                alert("Please enter a valid bus stop code.");
+            }else{
+                displayBuses(bs_code);
             }
         }
     }
@@ -29,60 +34,58 @@ function sendFormData(){
     request_pre.send();
 
     // console.log(busStopCodes);
+}
 
-    if (bs_code  == ''){
-        alert("Please choose a bus stop code.");
-    // }else if (!busStopCodes.includes(bs_code)){
-    //     alert("Please enter a valid bus stop code.")
-    // }
-    }else{
-        var bus_display = document.getElementById("bus_display");
+function displayBuses(bs_code){
+    //sending data to php file
+    var formData = new FormData();
+    
+    var bus_display = document.getElementById("bus_display");
 
-        formData.append("bs_code",bs_code); 
-        // for(var pair of formData.entries()) {
-        //     console.log(pair[0]+', '+pair[1]);
-        //   }
-    
-        var url = "../rec/busArrivalAPI.php";
-        var request = new XMLHttpRequest();
-    
-        request.onload = function(){
-            // console.log(JSON.parse(this.responseText));
-            var data = JSON.parse(this.responseText).Services;
-            // console.log(data);
-    
-            //clearing the options when searching for different postal codes
-            while (bus_display.lastChild !== null) {;
-                bus_display.lastChild.remove();
-            }
-                
-            if (bus_display !== null ) {
-                div2.classList.remove("d-none");
-            }
-    
-            var op = document.createElement("option");
-            op.setAttribute("value", "all");
-            var text = document.createTextNode("All buses");
-            op.appendChild(text);
-            bus_display.appendChild(op);
-    
-            for (var i of data) {
-                var option = document.createElement("option");
-    
-                option.setAttribute("value", i.ServiceNo);
-    
-                var textNode = document.createTextNode(i.ServiceNo);
-    
-                option.appendChild(textNode);
-    
-                bus_display.appendChild(option);
-    
-            }
+    formData.append("bs_code",bs_code); 
+    // for(var pair of formData.entries()) {
+    //     console.log(pair[0]+', '+pair[1]);
+    //   }
+
+    var url = "../rec/busArrivalAPI.php";
+    var request = new XMLHttpRequest();
+
+    request.onload = function(){
+        // console.log(JSON.parse(this.responseText));
+        var data = JSON.parse(this.responseText).Services;
+        // console.log(data);
+
+        //clearing the options when searching for different postal codes
+        while (bus_display.lastChild !== null) {;
+            bus_display.lastChild.remove();
         }
-        
-        request.open("POST", url, true);
-        request.send(formData);
+            
+        if (bus_display !== null ) {
+            div2.classList.remove("d-none");
+        }
+
+        var op = document.createElement("option");
+        op.setAttribute("value", "all");
+        var text = document.createTextNode("All buses");
+        op.appendChild(text);
+        bus_display.appendChild(op);
+
+        for (var i of data) {
+            var option = document.createElement("option");
+
+            option.setAttribute("value", i.ServiceNo);
+
+            var textNode = document.createTextNode(i.ServiceNo);
+
+            option.appendChild(textNode);
+
+            bus_display.appendChild(option);
+
+        }
     }
+    
+    request.open("POST", url, true);
+    request.send(formData);
 }
 
 function getBusArrival(busNo){
