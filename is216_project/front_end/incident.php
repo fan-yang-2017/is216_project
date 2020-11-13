@@ -82,7 +82,6 @@
             </nav>
         </header>
 
-
         <div class="container">
             <h2 style="text-align: center;">Traffic Incident</h2>
             <div id="map"></div>
@@ -91,7 +90,6 @@
             <div class="row justify-content-center">
                 <p><span style="color: red;">*</span>Click the radio button to show the incident on the map</p>
                 <div id="incident_table" style="width:90%"> 
-
                 </div>       
             </div>         
         </div> 
@@ -102,6 +100,7 @@
                 <div class="small text-center text-muted">© 2020Copyright:Time Traveller</div>
             </div>
         </footer>
+
         <script defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3nD9MqQk2qELQG2RWfHixIHnX1MzQ86o&callback=initMap">
         </script>
@@ -111,7 +110,8 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
         <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-        <!-- Custome Javascript -->
+        
+        <!-- Custom Javascript -->
         <script type='text/javascript' src="../rec/traffic_incidents.js"></script>
     </body>
 </html>

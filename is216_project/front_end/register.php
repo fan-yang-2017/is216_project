@@ -106,6 +106,5 @@
             <p> Already have an account? <a href = "login.php">Login here</a></p>
             <?php printErrors();?>
         </form>
-      
     </body>
 </html>
