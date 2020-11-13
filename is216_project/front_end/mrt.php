@@ -18,7 +18,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
         
         <title>Time Traveller</title>
-        <script src="../rec/TrainService.js"></script>
 
         <style>
         html, body {
@@ -113,13 +112,12 @@
           <p align="right">
             <a style="margin-right: 40px" class="btn  btn-outline-info" href="demoMRT.html" role="button">Demo  &raquo;</a>
           </p>
+            <div class="container">
+              <div id="map"></div>
+              <div class="msg" id="display"></div>
+            </div>
 
-             <div id="map"></div>
-          
-        
-        
-       
-             <div class="msg" id="display"></div>
+            
         <!-- Footer-->
         <footer>
             <div class="container">
@@ -135,7 +133,7 @@
             });
             const transitLayer = new google.maps.TransitLayer();
             transitLayer.setMap(map);
-}
+            }
           </script>
              <script defer
              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3nD9MqQk2qELQG2RWfHixIHnX1MzQ86o&callback=initMap">
@@ -146,7 +144,8 @@
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
           <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-
+          
+          <script src="../rec/TrainService.js"></script>
         
     </body>
 </html>
