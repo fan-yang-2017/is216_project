@@ -29,14 +29,14 @@
             exit;
         }
         else {
-            $error_arr[] = "You have entered the wrong password.";
+            $error_arr[] = "You have entered the wrong password!";
             $_SESSION['errors'] = $error_arr;
             header('Location: login.php');
             exit();
         }
     } 
     else {
-        $error_arr[] = "User does not exist.";
+        $error_arr[] = "User does not exist!";
         $_SESSION['errors'] = $error_arr;
         header('Location: login.php');
         exit();

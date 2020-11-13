@@ -20,6 +20,11 @@
         $error_arr[] = "Password and Confirm Password are not the same.";
     }
 
+    // Username and Password should be at least 5 characters length
+    if (strlen($username) <= 4 || strlen($password) <= 4) {
+        $error_arr[] = "Username or Password must have at least 5 characters!";
+    } 
+
     // If one or more fields have validation error
     if (count($error_arr) != 0) {
         $_SESSION['errors'] = $error_arr;

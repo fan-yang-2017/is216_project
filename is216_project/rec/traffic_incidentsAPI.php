@@ -17,7 +17,7 @@
     
     $response = curl_exec($ch);    
 
-    // close handle to release resources
+    // Close handle to release resources
     curl_close($ch);
 
     echo $response ;
