@@ -84,11 +84,9 @@
 
 
         <div class="container">
-            <div class="row"></div>
-                <h2 style="text-align: center;">Traffic Incident</h2>
-                <div id="map"></div>
-            </div>
-
+            <h2 style="text-align: center;">Traffic Incident</h2>
+            <div id="map"></div>
+            
             <h2 style="text-align: center;">Incident list</h2>
             <div class="row justify-content-center">
                 <p><span style="color: red;">*</span>Click the radio button to show the incident on the map</p>
