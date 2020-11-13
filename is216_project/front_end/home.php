@@ -135,7 +135,7 @@
                                 <!-- Title -->
                                 <h4 class="card-title"><strong>Bus</strong></h4>
                                 <!-- Subtitle -->
-                                <h5 class="blue-text pb-2"><strong>Get Bus arrival time</strong></h5>
+                                <h5 class="blue-text pb-2"><strong>Get Bus Arrival Time</strong></h5>
                                 <!-- Button -->
                                 <!-- <div class="card-body"> -->
                                     <a class="btn  btn-outline-info" href="bus.php" role="button">Find Out &raquo;</a>
@@ -161,7 +161,7 @@
                                 <!-- Title -->
                                 <h4 class="card-title"><strong>MRT</strong></h4>
                                 <!-- Subtitle -->
-                                <h5 class="blue-text pb-2"><strong>Know MRT breakdown info</strong></h5>
+                                <h5 class="blue-text pb-2"><strong>Know MRT Breakdown Information</strong></h5>
                                 <!-- Button -->
                                 <div class="card-body">
                                     <a class="btn  btn-outline-info" href="mrt.php" role="button">Find Out &raquo;</a>
@@ -186,7 +186,7 @@
                                 <!-- Title -->
                                 <h4 class="card-title"><strong>Drive</strong></h4>
                                 <!-- Subtitle -->
-                                <h5 class="blue-text pb-2"><strong>Know MRT breakdown info</strong></h5>
+                                <h5 class="blue-text pb-2"><strong>Know Traffic Incident Information</strong></h5>
                                 <!-- Button -->
                                 <div class="card-body">
                                     <a class="btn  btn-outline-info" href="incident.php" role="button">Find Out &raquo;</a>
