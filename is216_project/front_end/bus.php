@@ -26,16 +26,6 @@
             padding: 0;
             background-color:floralwhite;
         }
-        
-        #main{
-            height:60%;
-            background-image: url("img/Screenshot\ 2020-10-24\ at\ 2.09.02\ PM\ 2.png");
-            padding:150px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: scroll;
-            background-size: cover;
-        }
         #bus{
             height:100%;
             padding-top: 30px;
