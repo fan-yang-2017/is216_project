@@ -29,9 +29,6 @@
             .card {
                 height:420px;
             }
-
-           
-
             html, body {
                 height: 100%;
                 margin: 0;
