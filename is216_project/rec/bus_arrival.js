@@ -288,7 +288,6 @@ function refresh(busNo){
                 if (i.ServiceNo == opts[k]) {
                     var rawNextDate = i.NextBus.EstimatedArrival;
                     var rawNext2Date = i.NextBus2.EstimatedArrival;
-                    // var rawNext3Date = i.NextBus3.EstimatedArrival;
 
                     // set retrieved time into javascript date format
                     var nextbus = new Date(rawNextDate);
@@ -302,7 +301,6 @@ function refresh(busNo){
                     // covert from miliseconds to seconds to minutes
                     var nextBusTime = Math.floor(((nextbus.getTime() - d.getTime())/1000)/60);
                     var nextBus2Time = Math.floor(((nextbus2.getTime() - d.getTime())/1000)/60);
-                    // var nextBus3Time = Math.floor(((nextbus3.getTime() - d.getTime())/1000)/60);
 
                     var row = output_table.insertRow(-1);
                     for (var c = 0; c<cols; c++){
@@ -338,7 +336,6 @@ function refresh(busNo){
                 }else if (opts[k] == "all"){
                     var rawNextDate = i.NextBus.EstimatedArrival;
                     var rawNext2Date = i.NextBus2.EstimatedArrival;
-                    // var rawNext3Date = i.NextBus3.EstimatedArrival;
 
                     // set retrieved time into javascript date format
                     var nextbus = new Date(rawNextDate);
@@ -352,7 +349,6 @@ function refresh(busNo){
                     // covert from miliseconds to seconds to minutes
                     var nextBusTime = Math.floor(((nextbus.getTime() - d.getTime())/1000)/60);
                     var nextBus2Time = Math.floor(((nextbus2.getTime() - d.getTime())/1000)/60);
-                    // var nextBus3Time = Math.floor(((nextbus3.getTime() - d.getTime())/1000)/60);
 
                     var row = output_table.insertRow(-1);
                     for (var c = 0; c<cols; c++){

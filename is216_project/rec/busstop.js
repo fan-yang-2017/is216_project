@@ -11,7 +11,6 @@ function getBusStop() {
 
             var json_obj = JSON.parse(this.responseText);
             var records = json_obj.value;
-            // console.log(records);
 
             // E.g extracting the bus service no. from the json obj. 
             // console.log(records[0].BusStopCode);
