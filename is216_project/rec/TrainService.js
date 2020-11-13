@@ -34,7 +34,7 @@ function getParticularTrainService() {
                 <tr>
                     <th scope="col">Line</th>
                     <th scope="col">Direction</th>
-                    <th scope="col">Satations</th>
+                    <th scope="col">Stations</th>
                     <th scope="col">Free Public Bus</th>
                     <th scope="col">Free MRT Shuttle</th>
                     <th scope="col">Description</th>
