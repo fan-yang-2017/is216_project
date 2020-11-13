@@ -29,6 +29,7 @@
             .card {
                 height:420px;
             }
+
             html, body {
                 height: 100%;
                 margin: 0;
@@ -65,7 +66,6 @@
                 border: none;
                 cursor: pointer;
             } 
-                
         </style>
     </head>
     <body >
