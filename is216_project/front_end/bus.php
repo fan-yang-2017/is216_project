@@ -104,7 +104,7 @@
                 <div class="autocomplete" name="busCodeForm">                   
                     <label for="bs_code">Plese enter bus stop code:</label>
                     <div class="form-inline">
-                      <input type="text" class="form-control" id="bs_code" name="bs_code" placeholder="eg.83189">
+                      <input type="text" maxlength="5" class="form-control" id="bs_code" name="bs_code" placeholder="eg.83189">
                       &nbsp;&nbsp;&nbsp;&nbsp;
                       <button class="btn btn-primary" type="button" onclick="sendFormData()">Submit</button>
                     </div> 
