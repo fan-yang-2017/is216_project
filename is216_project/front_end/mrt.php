@@ -112,7 +112,7 @@
         <h2>MRT Breakdown Information</h2>
           
         <p align="right">
-            <a style="margin-right: 40px" class="btn  btn-outline-info" href="demoMRT.html" role="button">Demo  &raquo;</a>
+            <a style="margin-right: 40px" class="btn  btn-outline-info" href="demoMRT.php" role="button">Demo  &raquo;</a>
         </p>
         <div class="container">
             <div id="map"></div>
