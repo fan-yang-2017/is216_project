@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+<?php
+    require_once 'common.php';
+
+    $username = '';
+    if (isset($_SESSION["user"])) {
+        $username = $_SESSION["user"];
+    } else {
+        header("Location: before_home.html");
+    }
+?>
+
 <html lang="en">
     <head>
         <!-- Required meta tags -->
@@ -84,12 +94,17 @@
                             <a class="nav-link" href="bus.php">Bus</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="mrt.php">MRT</a>
+                            <a class="nav-link" style="color: blue;" href="mrt.php">MRT</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="incident.php">Traffic Incident</a>
                         </li>
                     </ul>
+                    <nav class="form-inline mt-2 mt-md-0">
+                        Welcome, <?= $username?>! 
+                        <img src="img/account.jpg" style="margin-left: 5px;" width="30" height="30" alt="logo">
+                        <a class="nav-link" href="logout.php">Log out</a>
+                    </nav>
                 </div>
             </nav>
         </header>
