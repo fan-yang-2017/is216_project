@@ -24,6 +24,8 @@ function getBusStop() {
     request.send();
 }
 
+/* credits to https://www.w3schools.com/howto/howto_js_autocomplete.asp for the autocomplete dropdown list */
+
 function autocomplete(inp, arr) {
     getBusStop();
     /*the autocomplete function takes two arguments,
