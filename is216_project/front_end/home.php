@@ -134,6 +134,8 @@
                                 <h5 class="blue-text pb-2"><strong>Get Bus Arrival Time</strong></h5>
                                 <!-- Button -->
                                 <!-- <div class="card-body"> -->
+                                    <br>
+                                    <br>
                                     <a class="btn  btn-outline-info" href="bus.php" role="button">Find Out &raquo;</a>
                                 <!-- </div> -->
                             </div>
