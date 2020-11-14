@@ -8,7 +8,7 @@
     session_destroy();
 
     // 3) Redirect user to before_home.html
-    header('Location: before_home.html');
+    header('Location: ../../before_home.html');
     exit();
 ?>
 
