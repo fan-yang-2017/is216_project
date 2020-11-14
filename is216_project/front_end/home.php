@@ -132,11 +132,10 @@
                             <!-- Subtitle -->
                             <h5 class="blue-text pb-2"><strong>Get Bus Arrival Time</strong></h5>
                             <!-- Button -->
-                            <!-- <div class="card-body"> -->
-                            <br>
-                            <br>
-                            <a class="btn  btn-outline-info" href="bus.php" role="button">Find Out &raquo;</a>
-                            <!-- </div> -->
+                            <!--<a class="btn btn-outline-info" style="margin-top: 5px;" href="bus.php" role="button">Find Out &raquo;</a>-->
+                        </div>
+                        <div class="card-footer" style="background-color: white;">
+                            <a class="btn btn-outline-info" style="margin-top: 5px;" href="bus.php" role="button">Find Out &raquo;</a>
                         </div>
                     </div>
                 </div><!-- /.col-lg-3 -->
@@ -160,9 +159,11 @@
                             <!-- Subtitle -->
                             <h5 class="blue-text pb-2"><strong>Know MRT Breakdown Information</strong></h5>
                             <!-- Button -->
-                            <div class="card-body">
-                                <a class="btn  btn-outline-info" href="mrt.php" role="button">Find Out &raquo;</a>
-                            </div>
+                            <!--<a class="btn btn-outline-info" style="margin-top: 5px;" href="mrt.php" role="button">Find Out &raquo;</a>-->
+                            
+                        </div>
+                        <div class="card-footer" style="background-color: white;">
+                            <a class="btn btn-outline-info" style="margin-top: 5px;" href="mrt.php" role="button">Find Out &raquo;</a>
                         </div>
                     </div>
                 </div><!-- /.col-lg-3 -->
@@ -186,10 +187,14 @@
                             <!-- Subtitle -->
                             <h5 class="blue-text pb-2"><strong>Know Traffic Incident Information</strong></h5>
                             <!-- Button -->
-                            <div class="card-body">
-                                <a class="btn  btn-outline-info" href="incident.php" role="button">Find Out &raquo;</a>
-                            </div>
+               
+                            <!--<a class="btn btn-outline-info" style="margin-top: 5px;" href="incident.php" role="button">Find Out &raquo;</a>-->
+                     
                         </div>
+                        <div class="card-footer" style="background-color: white;">
+                        <a class="btn btn-outline-info" style="margin-top: 5px;" href="incident.php" role="button">Find Out &raquo;</a>
+                        </div>
+                        
                     </div>
                 </div><!-- /.col-lg-3 -->
             </div><!-- /.row -->
