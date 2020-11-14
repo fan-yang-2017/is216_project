@@ -27,6 +27,7 @@ b)Bus Function
   -Empty bus stop code field
   -Invalid bus stop code
  ii)Key in bus stop code (there is suggest bus stop codes accordingly to code entered into the field)
+     (Takes up to 5 seconds to load the bus services list)
  iii) Bus stop list
   - All buses (displays all buses info)
   - User can select and display multiple bus informations by pressing ctrl + click the bus services 
